@@ -3,6 +3,7 @@
 	desc = "A basic energy-based gun."
 	icon_state = "energy"
 	fire_sound_text = "laser blast"
+	icon = 'icons/obj/weapons/gun/energy.dmi'
 
 	var/obj/item/cell/power_supply //What type of power cell this uses
 	var/charge_cost = 20 //How much energy is needed to fire.

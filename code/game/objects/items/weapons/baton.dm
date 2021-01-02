@@ -10,7 +10,7 @@
 /obj/item/melee/classic_baton
 	name = "police baton"
 	desc = "A truncheon for beating criminal scum."
-	icon = 'icons/obj/weapons.dmi'
+	icon = 'icons/obj/weapons/melee/energy.dmi'
 	icon_state = "baton"
 	item_state = "EB-shaft"
 	slot_flags = SLOT_BELT

@@ -1,8 +1,8 @@
 //FLAMETHROWER
-
 /obj/item/gun/flamer
 	name = "\improper M2A4 Fire Thrower"
 	desc = "Flame thrower made to light people you don't like on fire."
+	icon = 'icons/obj/weapons/gun/other.dmi'
 	icon_state = "flamethrower"
 //	item_state = "flamer"
 	slot_flags = SLOT_BACK

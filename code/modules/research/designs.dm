@@ -628,7 +628,7 @@ other types of metals and chemistry for reagents).
 	id = "nuclear_gun"
 	req_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 5, TECH_POWER = 3)
 	materials = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 1000, "uranium" = 500)
-	build_path = /obj/item/gun/energy/gun/nuclear
+	build_path = /obj/item/gun/energy/nuclear
 	sort_string = "TAEAA"
 
 /datum/design/item/lasercannon

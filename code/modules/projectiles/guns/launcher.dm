@@ -4,6 +4,7 @@
 	w_class = ITEM_SIZE_HUGE
 	obj_flags =  OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BACK
+	icon = 'icons/obj/weapons/gun/projectile.dmi'
 
 	var/release_force = 0
 	var/throw_distance = 10

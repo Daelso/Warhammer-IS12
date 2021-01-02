@@ -436,7 +436,7 @@ datum/objective/nuclear
 
 	var/global/possible_items_special[] = list(
 		/*"nuclear authentication disk" = /obj/item/disk/nuclear,*///Broken with the change to nuke disk making it respawn on z level change.
-		"nuclear gun" = /obj/item/gun/energy/gun/nuclear,
+		"nuclear gun" = /obj/item/gun/energy/nuclear,
 		//"diamond drill" = /obj/item/pickaxe/diamonddrill,
 		//"bag of holding" = /obj/item/storage/backpack/holding,
 		"hyper-capacity cell" = /obj/item/cell/hyper,

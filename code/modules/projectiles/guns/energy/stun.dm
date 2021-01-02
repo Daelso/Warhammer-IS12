@@ -1,6 +1,7 @@
 /obj/item/gun/energy/taser
 	name = "Mk30 NL"
 	desc = "Low capacity gun used for non-lethal takedowns. Never has ammo when you need it the most."
+	icon = 'icons/obj/weapons/gun/energy.dmi'
 	icon_state = "taser"
 	fire_sound = 'sound/weapons/guns/fire/pain_fire.ogg'
 	item_state = null	//so the human update icon uses the icon_state instead.
@@ -47,6 +48,7 @@
 /obj/item/gun/energy/stunrevolver
 	name = "stun revolver"
 	desc = "A LAEP20 Zeus. Designed by Lawson Arms and produced under the wing of the FTU, several TSCs have been trying to get a hold of the blueprints for half a decade."
+	icon = 'icons/obj/weapons/gun/energy.dmi'
 	icon_state = "stunrevolver"
 	item_state = "stunrevolver"
 	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3, TECH_POWER = 2)

@@ -1,3 +1,6 @@
+/obj/item/melee
+	icon = 'icons/obj/weapons/melee/misc.dmi'
+
 /obj/item/melee/whip
 	name = "whip"
 	desc = "A generic whip."

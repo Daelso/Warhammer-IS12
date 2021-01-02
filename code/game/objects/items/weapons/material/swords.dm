@@ -6,6 +6,7 @@
 /obj/item/material/sword
 	name = "claymore"
 	desc = "You use the sharp part on your foes. And the flat part on your lesser foes."
+	icon = 'icons/obj/weapons/melee/misc.dmi'
 	icon_state = "claymore"
 	item_state = "claymore"
 	slot_flags = SLOT_BELT
@@ -144,6 +145,7 @@
 	force_divisor = 0.4
 	thrown_force_divisor = 0.4
 	block_chance = 50
+	slot_flags = SLOT_BACK | SLOT_BELT
 
 
 /obj/item/material/sword/machete

@@ -1,4 +1,5 @@
 /obj/item/melee/energy
+	icon = 'icons/obj/weapons/melee/energy.dmi'
 	var/active = 0
 	var/active_force
 	var/active_throwforce

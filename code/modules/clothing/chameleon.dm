@@ -338,7 +338,8 @@
 /obj/item/gun/energy/chameleon
 	name = "revolver"
 	desc = "A hologram projector in the shape of a gun. There is a dial on the side to change the gun's disguise."
-	icon_state = "revolver"
+	icon = 'icons/obj/weapons/gun/projectile.dmi'
+	icon_state = "cptrevolver"
 	w_class = ITEM_SIZE_SMALL
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2, TECH_ILLEGAL = 8)
 	matter = list()
@@ -357,8 +358,8 @@
 
 	if(!gun_choices)
 		gun_choices = list()
-		for(var/gun_type in typesof(/obj/item/gun/) - src.type)
-			var/obj/item/gun/G = gun_type
+		for(var/gun_type in typesof(/obj/item/gun/projectile) - src.type)
+			var/obj/item/gun/projectile/G = gun_type
 			src.gun_choices[initial(G.name)] = gun_type
 	return
 

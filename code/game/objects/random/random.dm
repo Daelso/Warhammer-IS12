@@ -268,7 +268,7 @@
 				/obj/item/gun/energy/retro = 2,
 				/obj/item/gun/energy/lasercannon = 2,
 				/obj/item/gun/energy/sniperrifle = 1,
-				/obj/item/gun/energy/gun/nuclear = 1,
+				/obj/item/gun/energy/nuclear = 1,
 				/obj/item/gun/energy/ionrifle = 2,
 				/obj/item/gun/energy/taser = 4,
 				/obj/item/gun/energy/crossbow/largecrossbow = 2,

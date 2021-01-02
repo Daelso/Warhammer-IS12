@@ -14,6 +14,7 @@
 	screen_shake = 0
 	combustion = 1
 	gun_type = GUN_PISTOL
+	icon = 'icons/obj/weapons/gun/projectile.dmi'
 	var/image/rust_overlay = null //for condition shit
 	var/caliber = "357"		//determines which casings will fit
 	var/handle_casings = EJECT_CASINGS	//determines how spent casings should be handled
