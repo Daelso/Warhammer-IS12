@@ -697,7 +697,7 @@
 
 /obj/item/reagent_containers/food/snacks/khornemeat
 	name = "khorne daemon meat"
-	desc = "The mere touch of this piece of meat fills you with rage."
+	desc = "The mere sight of this piece of meat fills you with rage."
 	icon_state = "bearmeat"
 	filling_color = "#08acf8cc"
 	center_of_mass = "x=16;y=10"
