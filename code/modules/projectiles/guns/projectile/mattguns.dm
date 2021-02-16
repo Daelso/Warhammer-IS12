@@ -559,7 +559,7 @@
 
 /obj/item/gun/projectile/ravenbolter //needs lots of work and love, ok standin for now
 	name = "raven guard bolter rifle"
-	desc = "The legendary weapon of the raven guard astartes, the bolter rifle."
+	desc = "Hog is the best, AROUND! NOTHINGS EVER GONNA KEEP ME DOWN. HOG IS THE BEST, AROUND! NOTHINGS EVER GONNA KEEP ME DOWN."
 	icon_state = "ravenbolter"
 	str_requirement = 18 //IS12 has a 20 str cap so dont go over it
 	w_class = ITEM_SIZE_HUGE
