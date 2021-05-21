@@ -248,12 +248,33 @@
 		H.warfare_language_shit(LANGUAGE_LOW_GOTHIC )
 		H.warfare_faction = IMPERIUM
 		H.get_idcard()?.access = get_all_accesses()
+		H.verbs += /mob/living/carbon/human/proc/retinueselection
 		to_chat(H, "<span class='notice'><b><font size=3>You are a Principle agent of the Ordos Helican, your Master, a fully fledged Inquisitor has ordered you to this planet to perform reconaissance and keep an eye on the various pilgrims/penitents passing through. Report any heresy, suffer not the heretic to live.</font></b></span>")
 
 /datum/job/inquisitor/equip(var/mob/living/carbon/human/H)
 	. = ..()
 	if(.)
 		H.implant_loyalty(H)
+
+/mob/living/carbon/human/proc/retinueselection()
+	set name = "Select your retinue type"
+	set category = "Acolyte"
+	set desc = "Choose your retinue type"
+	if(!ishuman(src))
+		to_chat(src, "<span class='notice'>How tf are you seeing this, ping Wel Ard immediately</span>")
+		return
+	if(src.stat == DEAD)
+		to_chat(src, "<span class='notice'>You can't choose a class when you're dead.</span>")
+		return
+	var/mob/living/carbon/human/U = src
+	var/chapter = list("Callidus Assassin","Excoriator", "Primaris Psyker", "Mortiurge", "Combat Servitor") //lists all possible chapters
+	var/chapterchoice = input("Choose your retinue type", "Available retinue types") as anything in chapter
+
+	switch(chapterchoice)
+		// TODO: loadouts
+
+	U.verbs -= list(/mob/living/carbon/human/proc/retinueselection,
+	)
 
 /datum/job/leadinquisitor
 	title = "Ordos Helican Inquisitor"
