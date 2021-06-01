@@ -267,14 +267,19 @@
 		to_chat(src, "<span class='notice'>You can't choose a class when you're dead.</span>")
 		return
 	var/mob/living/carbon/human/U = src
-	var/chapter = list("Callidus Assassin","Excoriator", "Primaris Psyker", "Mortiurge", "Combat Servitor") //lists all possible chapters
+	var/chapter = list("Callidus Assassin","Tempestus Scion", "Crusader") //lists all possible chapters
 	var/chapterchoice = input("Choose your retinue type", "Available retinue types") as anything in chapter
 
 	switch(chapterchoice)
 		// TODO: loadouts
-
-	U.verbs -= list(/mob/living/carbon/human/proc/retinueselection,
-	)
+		if ("Callidus Assassin")
+			to_chat(U, "<span class='notice'><b><font size=3>callidus</font></b></span>")
+		if ("Tempestus Scion")
+			to_chat(U, "<span class='notice'><b><font size=3>stormtrooper</font></b></span>")
+		if ("Crusader")
+			to_chat(U, "<span class='notice'><b><font size=3>crusader</font></b></span>")
+	//U.verbs -= list(/mob/living/carbon/human/proc/retinueselection,
+	//)
 
 /datum/job/leadinquisitor
 	title = "Ordos Helican Inquisitor"
