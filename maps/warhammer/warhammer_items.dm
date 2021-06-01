@@ -1384,39 +1384,3 @@ Imperial Guardsman
 	channels = list("Imperial" = 1, "Inquisition" = 1)
 	origin_tech = list(TECH_ILLEGAL = 2)
 	syndie = 1
-
-//inquisition shit
-/obj/item/poisonblade
-	desc = "A slim needle-like blade with a central channel for fluid."
-	name = "Poison Blade"
-	icon = 'icons/obj/bureaucracy.dmi'
-	icon_state = "pen"
-	item_state = "pen"
-	slot_flags = SLOT_BELT | SLOT_EARS
-	throwforce = 0
-	sharp = 1
-	w_class = ITEM_SIZE_TINY
-	throw_speed = 7
-	throw_range = 15
-	force = 5
-	matter = list(DEFAULT_WALL_MATERIAL = 10)
-	atom_flags = ATOM_FLAG_OPEN_CONTAINER
-	origin_tech = list(TECH_MATERIAL = 2, TECH_ILLEGAL = 5)
-
-/obj/item/poisonblade/New()
-	..()
-	create_reagents(10)
-
-/obj/item/poisonblade/attack(mob/living/M, mob/user, var/target_zone)
-
-	if(!istype(M))
-		return
-
-	. = ..()
-
-	if(M.can_inject(user, target_zone))
-		if(reagents.total_volume)
-			if(M.reagents)
-				var/contained_reagents = reagents.get_reagents()
-				var/trans = reagents.trans_to_mob(M, 30, CHEM_BLOOD)
-				admin_inject_log(user, M, src, contained_reagents, trans)	
