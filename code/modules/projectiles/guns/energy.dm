@@ -24,6 +24,10 @@
 	var/ammoType = null
 	combustion = 1
 
+	//var/obj/item/bagtest
+	//var/obj/item/cell/backpackcell
+	//var/obj/item/cell/suitstoragecell
+
 /obj/item/gun/energy/switch_firemodes()
 	. = ..()
 	if(.)
@@ -76,6 +80,23 @@
 	if(isrobot(src.loc))
 		var/mob/living/silicon/robot/R = src.loc
 		return R.cell
+	if(ishuman(src.loc))
+		var/mob/living/carbon/human/H = loc
+		if(H.get_equipped_item(slot_back))
+			var/obj/item/backpackitem = H.get_equipped_item(slot_back)
+			if(istype(backpackitem, /obj/item/hellgunpower))
+				var/obj/item/hellgunpower/backpackpack = backpackitem
+				var/obj/item/cell/backpackcell = backpackpack.cell
+				if(backpackcell && backpackcell.charge)
+					return backpackcell
+
+		if(H.get_equipped_item(slot_s_store))
+			var/obj/item/suitstorageitem = H.get_equipped_item(slot_s_store)
+			if(istype(suitstorageitem, /obj/item/hellgunpower))
+				var/obj/item/hellgunpower/suitstoragepack = suitstorageitem
+				var/obj/item/cell/suitstoragecell = suitstoragepack.cell
+				if(suitstoragecell && suitstoragecell.charge)
+					return suitstoragecell
 	return null
 
 /obj/item/gun/energy/examine(mob/user)
