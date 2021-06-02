@@ -1384,3 +1384,45 @@ Imperial Guardsman
 	channels = list("Imperial" = 1, "Inquisition" = 1)
 	origin_tech = list(TECH_ILLEGAL = 2)
 	syndie = 1
+
+//inquisitorial retinue stuff
+/obj/item/clothing/suit/armor/stormtrooper
+	name = "Tempestus Scion's Armor"
+	desc = "Armor worn by the Tempestus Scions."
+	icon_state = "storm"
+	item_state = "storm"
+	allowed = list(/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/cell,/obj/item/gun/energy/las/lasgun)
+	armor = list(melee = 30, bullet = 30, laser = 30, energy = 25, bomb = 10, bio = 10, rad = 0)
+	cold_protection = UPPER_TORSO | LOWER_TORSO | LEGS | FEET | ARMS | HANDS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+
+/obj/item/clothing/head/helmet/stormtrooper
+	name = "Tempestus Scion Helmet"
+	desc = "Sometimes protects your head from bullets and blows."
+	icon_state = "stormh"
+	cold_protection = HEAD
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+
+/obj/item/gun/energy/las/hellgun
+	name = "Hellgun"
+	desc = "A rare and more powerful pattern of lasgun, commonly found in the hands of the Tempestus Secions. Requires a external power pack."
+	icon_state = "lasgun"
+	item_state = "lasgun"
+	slot_flags = SLOT_BACK|SLOT_S_STORE
+	w_class = ITEM_SIZE_LARGE
+	force = 25
+	one_hand_penalty = 2
+	accuracy = 3
+	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 2)
+	matter = list(DEFAULT_WALL_MATERIAL = 2000)
+	projectile_type = /obj/item/projectile/energy/las/lasgun
+	charge_cost = 50
+	max_shots = 10
+	ammoType = /obj/item/cell/lasgun
+	wielded_item_state = "lasgun-wielded"
+
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, one_hand_penalty=2, burst_accuracy=null, dispersion=null, automatic = 0),
+		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    one_hand_penalty=3, burst_accuracy=list(0,-1,-1),       dispersion=list(0.0, 0.6, 1.0), automatic = 0),
+		list(mode_name="automatic",   	 burst=1, fire_delay=0.5,  move_delay=null, one_hand_penalty=2, burst_accuracy=null, dispersion=list(0.2), automatic = 0.1),
+		)
