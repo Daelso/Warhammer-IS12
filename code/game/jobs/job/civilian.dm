@@ -280,6 +280,7 @@
 			equip_to_slot_or_del(new /obj/item/clothing/shoes/jackboots, slot_shoes)
 			equip_to_slot_or_del(new /obj/item/clothing/mask/gas/security/agent, slot_wear_mask)
 			equip_to_slot_or_del(new /obj/item/gun/energy/las/hellgun, slot_r_hand)
+			equip_to_slot_or_del(new /obj/item/gun/energy/las/hellpistol, slot_l_hand)
 			equip_to_slot_or_del(new /obj/item/hellgunpower, slot_s_store)
 			to_chat(U, "<span class='notice'><b><font size=3>stormtrooper</font></b></span>")
 		if ("Crusader")

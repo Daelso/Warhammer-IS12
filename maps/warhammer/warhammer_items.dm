@@ -1427,6 +1427,31 @@ Imperial Guardsman
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, one_hand_penalty=2, burst_accuracy=null, dispersion=null, automatic = 0),
 		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=4,    one_hand_penalty=3, burst_accuracy=list(0,-1,-1),       dispersion=list(0.0, 0.6, 1.0), automatic = 0),
+		list(mode_name="automatic",   	 burst=1, fire_delay=0.8,  move_delay=null, one_hand_penalty=2, burst_accuracy=null, dispersion=list(0.2), automatic = 0.1),
+		)
+	
+/obj/item/gun/energy/las/hellpistol
+	name = "Hellpistol"
+	desc = "A rare and more powerful pattern of laspistol, favored by Tempestus Scions. Requires an external power pack."
+	icon_state = "laspistol"
+	item_state = "laspistol"
+	slot_flags = SLOT_BELT|SLOT_S_STORE
+	w_class = ITEM_SIZE_NORMAL
+	force = 10
+	accuracy = 3
+	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 2)
+	matter = list(DEFAULT_WALL_MATERIAL = 2000)
+	projectile_type = /obj/item/projectile/energy/las/lasgun
+	charge_cost = 50
+	max_shots = 10
+	recharge_time = 3
+	ammoType = /obj/item/cell/lasgun
+	self_recharge = 1
+	use_external_power = 1
+	wielded_item_state = "machinepistol-wielded" //this needs to be replaced ASAP with actual inhands/wielded for a laspistol
+
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null, automatic = 0),
 		list(mode_name="automatic",   	 burst=1, fire_delay=0.5,  move_delay=null, one_hand_penalty=2, burst_accuracy=null, dispersion=list(0.2), automatic = 0.1),
 		)
 
