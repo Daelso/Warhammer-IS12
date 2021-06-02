@@ -130,7 +130,7 @@
 
 
 /obj/item/gun/energy/unload_ammo(mob/user, var/allow_dump=1)
-	if(power_supply)
+	if(power_supply && use_external_power == 0)
 		playsound(src, 'sound/weapons/guns/interact/mag_unload.ogg', 100)
 		user.visible_message("[user] removes the power cell from [src].", "<span class='notice'>You remove the power cell from [src].</span>")
 		user.put_in_hands(power_supply)
