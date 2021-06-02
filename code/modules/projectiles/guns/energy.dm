@@ -24,10 +24,6 @@
 	var/ammoType = null
 	combustion = 1
 
-	//var/obj/item/bagtest
-	//var/obj/item/cell/backpackcell
-	//var/obj/item/cell/suitstoragecell
-
 /obj/item/gun/energy/switch_firemodes()
 	. = ..()
 	if(.)
