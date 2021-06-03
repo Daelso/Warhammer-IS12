@@ -55,42 +55,46 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 	if(!mind)				return
 	if(!mind.changeling)	mind.changeling = new /datum/changeling(gender)
 
-	verbs += /datum/changeling/proc/EvolutionMenu
-	add_language("Changeling")
+	if(mind.special_role == "Callidus Assassin")
 
-	if(iscarbon(src))
-		var/mob/living/carbon/C = src
-		var/obj/item/organ/internal/brain/brain = C.internal_organs_by_name[BP_BRAIN]
-		if(brain)
-			brain.fake_brain = 1
+	else
 
-	var/lesser_form = !ishuman(src)
+		verbs += /datum/changeling/proc/EvolutionMenu
+		add_language("Changeling")
 
-	if(!powerinstances.len)
-		for(var/P in powers)
-			powerinstances += new P()
+		if(iscarbon(src))
+			var/mob/living/carbon/C = src
+			var/obj/item/organ/internal/brain/brain = C.internal_organs_by_name[BP_BRAIN]
+			if(brain)
+				brain.fake_brain = 1
 
-	// Code to auto-purchase free powers.
-	for(var/datum/power/changeling/P in powerinstances)
-		if(!P.genomecost) // Is it free?
-			if(!(P in mind.changeling.purchasedpowers)) // Do we not have it already?
-				mind.changeling.purchasePower(mind, P.name, 0)// Purchase it. Don't remake our verbs, we're doing it after this.
+		var/lesser_form = !ishuman(src)
 
-	for(var/datum/power/changeling/P in mind.changeling.purchasedpowers)
-		if(P.isVerb)
-			if(lesser_form && !P.allowduringlesserform)	continue
-			if(!(P in src.verbs))
-				src.verbs += P.verbpath
+		if(!powerinstances.len)
+			for(var/P in powers)
+				powerinstances += new P()
 
-	for(var/language in languages)
-		mind.changeling.absorbed_languages |= language
+		// Code to auto-purchase free powers.
+		for(var/datum/power/changeling/P in powerinstances)
+			if(!P.genomecost) // Is it free?
+				if(!(P in mind.changeling.purchasedpowers)) // Do we not have it already?
+					mind.changeling.purchasePower(mind, P.name, 0)// Purchase it. Don't remake our verbs, we're doing it after this.
 
-	var/mob/living/carbon/human/H = src
-	if(istype(H))
-		var/datum/absorbed_dna/newDNA = new(H.real_name, H.dna, H.species.name, H.languages)
-		absorbDNA(newDNA)
+		for(var/datum/power/changeling/P in mind.changeling.purchasedpowers)
+			if(P.isVerb)
+				if(lesser_form && !P.allowduringlesserform)	continue
+				if(!(P in src.verbs))
+					src.verbs += P.verbpath
 
-	return 1
+		for(var/language in languages)
+			mind.changeling.absorbed_languages |= language
+
+		var/mob/living/carbon/human/H = src
+		if(istype(H))
+			var/datum/absorbed_dna/newDNA = new(H.real_name, H.dna, H.species.name, H.languages)
+			absorbDNA(newDNA)
+
+		return 1
 
 //removes our changeling verbs
 /mob/proc/remove_changeling_powers()

@@ -34,6 +34,7 @@
 #define MODE_RAIDER "raider"
 #define MODE_WIZARD "wizard"
 #define MODE_CHANGELING "changeling"
+#define MODE_CALLIDUS "callidus"
 #define MODE_CULTIST "cultist"
 #define MODE_MONKEY "monkey"
 #define MODE_RENEGADE "renegade"
