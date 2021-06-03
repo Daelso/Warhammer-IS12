@@ -1463,3 +1463,13 @@ Imperial Guardsman
 	icon_state = "welderpack"
 	w_class = ITEM_SIZE_HUGE
 	var/cell = new /obj/item/cell/infinite
+
+/obj/item/clothing/suit/armor/callidus
+	name = "Synskin Bodyglove"
+	desc = "A sleek ."
+	icon_state = "s-ninja"
+	item_state = "s-ninja"
+	allowed = list(/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/cell,/obj/item/gun/energy/las/lasgun)
+	armor = list(melee = 30, bullet = 30, laser = 30, energy = 25, bomb = 10, bio = 10, rad = 0)
+	cold_protection = UPPER_TORSO | LOWER_TORSO | LEGS | FEET | ARMS | HANDS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
