@@ -6,7 +6,7 @@
 	//icon_state = "snow_3"
 	icon = 'icons/turf/dirt.dmi'
 	icon_state = "dirt1"
-	movement_delay = 1
+	movement_delay = 0.5
 	has_coldbreath = TRUE
 	atom_flags = ATOM_FLAG_CLIMBABLE
 	var/has_light = TRUE
@@ -250,6 +250,7 @@
 /turf/simulated/floor/dirty/indestructable/mud
 	name = "mud"
 	desc = "This mud looks tougher than most other muds."
+	movement_delay = 1
 	icon_state = "mud"
 
 /turf/simulated/floor/dirty/indestructable/mud/New()
