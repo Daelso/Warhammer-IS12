@@ -259,7 +259,7 @@ Begin Warhammer loadouts
 /decl/hierarchy/outfit/job/ig/sergeant
 	name = OUTFIT_JOB_NAME("Imperial Guard Sergeant")
 	neck = /obj/item/reagent_containers/food/drinks/canteen
-	uniform = /obj/item/clothing/under/color/brown
+	uniform = null
 	suit = /obj/item/clothing/suit/armor/sgt
 	glasses = /obj/item/clothing/glasses/sunglasses
 	suit_store = /obj/item/gun/projectile/automatic/stubber
@@ -553,9 +553,6 @@ Begin Warhammer loadouts
 			equip_to_slot_or_del(W, slot_wear_id)
 
 		if("Cadian")
-			equip_to_slot_or_del(new /obj/item/clothing/under/guard/uniform, slot_w_uniform)
-			equip_to_slot_or_del(new /obj/item/clothing/suit/armor/guardsman, slot_wear_suit)
-			equip_to_slot_or_del(new /obj/item/clothing/head/helmet/guardhelmet, slot_head)
 			equip_to_slot_or_del(new /obj/item/clothing/shoes/jackboots, slot_shoes)
 			equip_to_slot_or_del(new /obj/item/gun/energy/las/lasgun, slot_l_hand)
 			equip_to_slot_or_del(new /obj/item/storage/box/ifak, slot_l_store)

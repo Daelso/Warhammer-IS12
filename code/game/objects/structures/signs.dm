@@ -277,9 +277,6 @@
 /obj/structure/sign/imperial
 	icon_state = "imperial"
 
-/obj/structure/sign/inquisition
-	icon_state = "research"
-
 /obj/structure/sign/mechanicus
 	icon_state = "mechanicus"
 

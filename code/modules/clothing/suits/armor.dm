@@ -236,17 +236,6 @@
 	valid_accessory_slots = list(ACCESSORY_SLOT_INSIGNIA)
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
-/obj/item/clothing/suit/armor/flak/armor
-	name = "flak armor"
-	desc = "A suit of resistant armor made from several layers of ablative and imapct-absorbant materials. One of the most commonly used armors in the Imperium, standard issue to the Imperial Guard."
-	icon_state = "farmor"
-	item_state = "farmor"
-	armor = list(melee = 45, bullet = 40, laser = 40, energy = 35, bomb = 45, bio = 0, rad = 0)
-	valid_accessory_slots = list(ACCESSORY_SLOT_INSIGNIA)
-	body_parts_covered = UPPER_TORSO|LOWER_TORSO||ARMS
-	cold_protection = UPPER_TORSO|LOWER_TORSO||ARMS
-	heat_protection = UPPER_TORSO|LOWER_TORSO||ARMS
-
 /obj/item/clothing/suit/armor/flak/heavy
 	name = "heavy flak armor"
 	desc = "A suit of heavy-duty armor made from a thick layer of ablative and impact-absorbant materials. Heavy and cumbersome, but quite durable."

@@ -11,13 +11,6 @@
  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'*/
 
 
-/obj/structure/statue/tanningrack
-	name = "tanning rack"
-	desc = "A wooden rack used to tan leather and hide."
-	icon = 'icons/obj/tanning.dmi'
-	icon_state = "tan_rack"
-	var/tanning = 0
-
 /obj/item/humanskin
 	name = "human skin"
 	desc = "Still moist and covered in blood, a chunk of flesh."

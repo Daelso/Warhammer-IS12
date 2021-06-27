@@ -166,13 +166,6 @@
 
 //Warhammer 40k stuff below
 
-/obj/item/clothing/head/helmet/flak
-	name = "flak helmet"
-	desc = "A solid helmet made from several layers of ablative and impact-resistant materials. A good helmet to wear if you're not looking to catch a skull-full of shrapnel."
-	icon_state = "guard"
-	armor = list(melee = 45, bullet = 40, laser = 40, energy = 35, bomb = 45, bio = 0, rad = 0)
-	siemens_coefficient = 0.6
-
 /obj/item/clothing/head/helmet/ravenhelm
 	name = "Raven Guard Power Helm"
 	desc = "The black, beaked mask of the Raven Guard."
