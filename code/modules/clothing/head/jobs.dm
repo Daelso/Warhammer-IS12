@@ -164,6 +164,14 @@
     icon_state = "Catachan_Headband"
     cold_protection = HEAD
     min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+	
+/obj/item/clothing/head/helmet/ValhallanUshanka
+	name = "Valhallan Ushanka"
+	desc = "Sometimes protects your head from bullets and blows."
+	icon_state = "ValhallanUshanka"
+	item_state = "ValhallanUshanka"
+	cold_protection = HEAD
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 
 /obj/item/clothing/head/helmet/medicae
 	name = "medicae helmet"
