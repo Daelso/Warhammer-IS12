@@ -878,7 +878,7 @@
 		return
 
 	var/say = sanitize(input("What do you wish to say"))
-	WarpHeat = WarpHeat + 10
+	WarpHeat += 10
 	if(mRemotetalk in target.mutations)
 		target.show_message("<span class='notice'>You hear [src.real_name]'s voice: [say]</span>")
 	else
