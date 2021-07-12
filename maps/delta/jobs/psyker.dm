@@ -17,4 +17,4 @@
 		WarpHeat = max(0, min(WarpHeat + 0.1, max_WarpHeat))
 	if(WarpHeat >= 100)
 		usr.visible_message("<span class='notice'>[usr] is positively radiating with foul Warp energy! A foul sickness washes over you!</span>",\
-		"You're burning out on Warp energy!")
+		"You're burning out on Warp energy! You feel the Eye of Terror gazing at you directly!")
