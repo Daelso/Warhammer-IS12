@@ -2,7 +2,7 @@
 	..()
 	if(psyker == 1)
 		stat(null, "Focus: [focus]/[max_focus]")
-		stat(null, "Warp Heat: [WarpHeat/[max_WarpHeat]")
+		stat(null, "Warp Heat: [WarpHeat]/[max_WarpHeat]")
 
 /mob/living/carbon/human/Life()
 	..()
