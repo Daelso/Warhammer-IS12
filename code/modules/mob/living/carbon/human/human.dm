@@ -23,6 +23,8 @@
 	var/psyker = 0
 	var/focus = 50
 	var/max_focus = 100
+	var/WarpHeat = 0 //used in map/~/jobs/psyker.dm
+	var/max_WarpHeat = 100 //ditto
 
 /mob/living/carbon/human/New(var/new_loc, var/new_species = null)
 
