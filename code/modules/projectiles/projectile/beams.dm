@@ -161,3 +161,26 @@
 	name = "heavy shock beam"
 	damage = 20
 	agony  = 10
+
+/obj/item/projectile/beam/melta
+	name = "melta beam"
+	icon_state = "gauss"
+	fire_sound = 'sound/effects/fire01.ogg'
+	pass_flags = PASS_FLAG_TABLE
+
+	disp_amount = 0.2 //has five times less dispersion
+	duration = 3
+	range = 4
+
+	damage = 30
+	armor_penetration = 30
+	agony = 10
+
+//maiming doesn't actually seem to be coded in, but I guess I'll leave this here
+//	maiming = 1
+//	maim_rate = 20
+	maim_type = DROPLIMB_BURN
+
+	muzzle_type = /obj/effect/projectile/melta/muzzle
+	tracer_type = /obj/effect/projectile/melta/tracer
+	impact_type = /obj/effect/projectile/melta/impact

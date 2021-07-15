@@ -175,6 +175,25 @@
 	icon_state = "impact_stun"
 
 //----------------------------
+// Melta beam
+//----------------------------
+/obj/effect/projectile/melta/
+	light_color = COLOR_YELLOW
+
+/obj/effect/projectile/melta/tracer
+	icon = 'icons/effects/projectiles/tracer.dmi'
+	icon_state = "hegemony"
+
+/obj/effect/projectile/melta/muzzle
+	icon = 'icons/effects/projectiles/muzzle.dmi'
+//	icon_state = "muzzle_hegemony" //muzzle fire drawing's fucky
+	icon_state = 0
+
+/obj/effect/projectile/melta/impact
+	icon = 'icons/effects/projectiles/impact.dmi'
+	icon_state = "impact_hegemony"
+
+//----------------------------
 // Bullet
 //----------------------------
 /obj/effect/projectile/bullet/muzzle

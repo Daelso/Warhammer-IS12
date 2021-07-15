@@ -28,6 +28,7 @@
 
 	var/accuracy = 0
 	var/dispersion = 0.0
+	var/disp_amount = 1 // multiplies dispersion by this amount
 
 	//used for shooting at blank range, you shouldn't be able to miss
 	var/can_miss = 0
@@ -108,6 +109,7 @@
 	var/non_trench_counter = 0 //For trench cover bullshit.
 	var/trench_counter = 0
 	var/do_not_pass_trench = FALSE //For stuff you do not want to leave the trench.
+	var/duration = 10 //how long the projectile lasts, in deciseconds
 
 /obj/item/projectile/CanPass()
 	return TRUE
@@ -732,8 +734,8 @@
 			return
 		var/turf/target = locate(Clamp(starting + xo, 1, world.maxx), Clamp(starting + yo, 1, world.maxy), starting.z)
 		setAngle(Get_Angle(src, target))
-	if(dispersion)
-		setAngle(Angle + rand(-dispersion, dispersion))
+	if(dispersion && disp_amount)
+		setAngle(Angle + (rand(-dispersion, dispersion)*disp_amount))
 	original_angle = Angle
 	if(!nondirectional_sprite)
 		var/matrix/M = new
@@ -988,7 +990,8 @@
 	STOP_PROCESSING(SSprojectiles, src)
 	return ..()
 
-/obj/item/projectile/proc/generate_hitscan_tracers(cleanup = TRUE, duration = 10)
+/obj/item/projectile/proc/generate_hitscan_tracers(cleanup = TRUE)
+	var/duration = src.duration
 	if(!length(beam_segments))
 		return
 	if(duration <= 0)
