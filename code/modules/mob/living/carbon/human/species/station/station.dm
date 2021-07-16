@@ -22,10 +22,11 @@
 	sexybits_location = BP_GROIN
 
 
-//	icon_template = 'icons/mob/human_races/r_tallcron.dmi'
-	icobase = 'icons/mob/human_races/r_widecron.dmi'
-	deform = 'icons/mob/human_races/r_widecron.dmi'
-	pixel_offset_x = -16
+//	icobase = 'icons/mob/human_races/r_human.dmi'
+//	deform = 'icons/mob/human_races/r_def_human.dmi'
+	icon_template = 'icons/mob/human_races/r_template_tall.dmi'
+	icobase = 'icons/mob/human_races/r_astartes.dmi'
+	deform = 'icons/mob/human_races/r_astartes.dmi'
 
 /datum/species/human/get_bodytype(var/mob/living/carbon/human/H)
 	return SPECIES_HUMAN
