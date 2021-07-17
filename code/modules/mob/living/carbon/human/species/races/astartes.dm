@@ -15,6 +15,10 @@ Astartes
 	deform = 'icons/mob/human_races/r_astartes.dmi'
 	damage_mask = 'icons/mob/human_races/masks/dam_mask_human.dmi'
 	blood_mask = 'icons/mob/human_races/masks/blood_human.dmi'
+
+	eye_icon = "eyes_s"
+	eye_icon_location = 'icons/mob/astartes_face.dmi'
+
 	gluttonous = GLUT_ITEM_NORMAL
 	total_health = 500
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR | HAS_A_SKIN_TONE

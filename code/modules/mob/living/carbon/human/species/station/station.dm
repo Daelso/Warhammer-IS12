@@ -27,6 +27,8 @@
 	icon_template = 'icons/mob/human_races/r_template_tall.dmi'
 	icobase = 'icons/mob/human_races/r_astartes.dmi'
 	deform = 'icons/mob/human_races/r_astartes.dmi'
+	eye_icon_location = 'icons/mob/astartes_face.dmi'
+	eye_icon = "eyes_s"
 
 /datum/species/human/get_bodytype(var/mob/living/carbon/human/H)
 	return SPECIES_HUMAN
