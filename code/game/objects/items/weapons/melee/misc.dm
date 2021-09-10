@@ -125,7 +125,7 @@
 			playsound(usr, 'sound/voice/Screams_Woman_1.ogg', 100, 1, 1)
 		..()
 
-// KRIEG AXE 
+// KRIEG AXE
 
 /obj/item/melee/trench_axe
 	name = "Trench Axe"
@@ -145,7 +145,7 @@
 	grab_sound = 'sound/items/handle/axe_grab.ogg'
 	grab_sound_is_loud = TRUE
 
-// CHAINSWORD 
+// CHAINSWORD
 
 /obj/item/melee/mercycs
 	name = "Locke Pattern Double-Edged Chainsword"
@@ -221,3 +221,11 @@
 	grab_sound_is_loud = TRUE
 	slot_flags = SLOT_BACK|SLOT_S_STORE
 	attack_verb = list("attacked", "sawed", "cleaved", "torn", "cut")
+
+/obj/item/melee/pcsword/eviscerator/chainaxe
+	name = "Deimos Pattern Chainaxe"
+	desc = "A weaker version of the Khornate Chainaxe that the Khornate Berserkers use, normally used by members of the blood cult."
+	icon = 'icons/obj/weapons/melee/misc.dmi'
+	icon_state = "chainaxe"
+	item_state = "chainaxe"
+	wielded_icon = "chainaxe_w"
