@@ -3,53 +3,50 @@
 ///Khorne Gifts and Benefits///
 ////////////////////////////////
 
-//Bloodlust
-
-/spell/bloodlust
-	name = "Bloodlust"
-	desc = "Screech with the power of a thousand warriors."
-
-	charge_type = Sp_RECHARGE
-	charge_max = 900
-	spell_flags = NEEDSHUMAN
-
-	invocation = "BLOOD FOR THE BLOOD GOD!"
-	invocation_type = SpI_SHOUT
-
-/spell/bloodlust/cast(list/targets, mob/living/carbon/human/user)
-	var/duration = 100
-	while(duration > 0)
-		if(user.staminaloss > 4)
-			user.adjustStaminaLoss(-4)
-		duration--
-
-
 //BLOODLETTER SUMMONING
 
-/spell/aoe_turf/conjure/sacrifice/bloodletter
-	name = "Blood Summoning"
-	desc = "Summon a daemonic warrior that will help you decimate your foes"
-	feedback = "FH"
+/mob/living/carbon/human/proc/pool_summoning()
+	set name = "Create Pool of Blood"
+	set desc = "Create a pool of blood so you can do blood summonings."
+	set category = "Object"
 
-	invocation = "Khak'akamshy'y"
-	invocation_type = SpI_SHOUT
-	range = 1
-	spell_flags = NEEDSHUMAN
+	var/obj/item/melee/M
+	if(M in get_both_hands())
+		if(!M.was_bloodied)
+			return
+		for(var/obj/item/melee/S in get_both_hands())
+			new /obj/blood_pool(loc)
+			S.clean_blood()
+			playsound(loc, 'sound/effects/gore/severed.ogg', 75)
 
-	summon_amt = 1
-	summon_type = list(/mob/living/simple_animal/daemon/bloodletter)
-	sacrifices = list(/obj/effect/decal/cleanable/blood)
+
+/obj/blood_pool
+	name = "Pool of blood"
+	desc = "Ew"
+	icon = 'icons/obj/blood_cult.dmi'
+	icon_state = "blood_pool"
+	anchored = TRUE
+	density = 0
+
+	attackby(obj/item/O, mob/living/carbon/human/user)
+		if(istype(O, /obj/item/stack/teeth))
+			var/obj/item/stack/teeth/T = O
+			if(T.amount == 32)
+				to_chat(user, "You drop the [T] into the [src].")
+				user.say("Khak'akamshy'y")
+				new /mob/living/simple_animal/daemon/bloodletter(loc)
+				qdel(T)
+				qdel_self()
 
 /mob/living/simple_animal/daemon/bloodletter
 	name = "Warp Rift"
 	desc = "A gate that directly connects with the immaterium."
 	icon = 'icons/mob/daemon.dmi'
 	icon_state = "daemonic_rift"
-	blend_mode = BLEND_SUBTRACT
 	health = 999999
 	maxHealth = 999999
-	melee_damage_lower = 0
-	melee_damage_upper = 0
+	melee_damage_lower = 35
+	melee_damage_upper = 60
 	attacktext = "mauls"
 	attack_sound ='sound/weapons/crowbarhit2.ogg'
 	faction = "chaos"
@@ -72,5 +69,8 @@
 				desc = "A lesser daemon of the warp, with claws strong enough to rip metal apart."
 				health = 400
 				maxHealth = 400
-				melee_damage_lower = 35
-				melee_damage_upper = 60
+
+	death(gibbed, deathmessage, show_dead_message)
+		new /obj/blood_pool(loc)
+		qdel_self()
+

@@ -1,5 +1,5 @@
 
-//khornite cult structures
+//khornite cult structures and objects
 
 /datum/reagent/daemonic_blood
 	name = "Odd Blood"
@@ -16,11 +16,11 @@
 		. = ..()
 
 /mob/living/carbon/human/proc/ConvertMob()
-	if(mind.god != KHORNE)
-		adjustFireLoss(5)
+	if(god != KHORNE)
+		adjustFireLoss(10)
 		to_chat(src, "<span='notice'>Your skin starts to itch.</span>")
 		sleep(150)
-		adjustFireLoss(10)
+		adjustFireLoss(25)
 		to_chat(src, "<span='warning'>Your skin starts to burn!</span>")
 		sleep(80)
 		adjustFireLoss(30)
@@ -40,7 +40,7 @@
 			switch(choice)
 				if("YES")
 					to_chat(src, "<span='notice'>You took the right choice. Welcome to the cult, the party is just starting!</span>")
-					mind.god = KHORNE
+					god = KHORNE
 				if("NO")
 					to_chat(src, "<span='warning'>You are ignorant. But He had mercy upon you, continue your futile struggles.</span>")
 
@@ -54,8 +54,8 @@
 	var/mob/player
 	var/active = FALSE
 
-	attack_hand(mob/user)
-		if(user.mind.god == KHORNE)
+	attack_hand(mob/living/carbon/human/user)
+		if(user.god == KHORNE)
 			if(!active)
 				if(!player)
 					to_chat(user, "You throw a drop of blood inside the skull totem, imprinting it with your own soul.")
@@ -77,7 +77,8 @@
 		light_range = 3
 		light_color = LIGHT_COLOR_FLARE
 		sleep(100)
-		M.mind.god.give_gifts(M)
+		if(M.god == KHORNE)
+			M.give_gifts()
 		deactivate()
 
 	proc/deactivate()
@@ -102,7 +103,7 @@
 	var/active = FALSE
 
 	attack_hand(mob/living/carbon/human/user)
-		if(user.mind.god == KHORNE)
+		if(user.god == KHORNE)
 			if(active != TRUE)
 				start_ritual(user)
 				active = TRUE
@@ -110,24 +111,23 @@
 
 	proc/start_ritual(mob/living/carbon/human/user)
 		icon_state = "[icon_state]-active"
-		var/list/totems
+		var/list/totems = list()
 		for(var/obj/structure/chaos/skull_totem/S in orange(3, src))
-			totems += S																	//FOR SOME FUCKING REASON IT GETS STUCK HERE
-			if(totems.len >= 4) //minimum totems = 4
-				for(S in totems)
-					S.activate()
-					var/obj/item/projectile/beam/blood_effect/effect = new(get_turf(src))
-					effect.pixel_x = 0
-					effect.pixel_y = 0
-					effect.launch_projectile(totems)
-					spawn(100)
-						icon_state = "blood_altar"
+			totems += S
+		if(totems.len >= 4) //minimum totems = 4
+			for(var/obj/structure/chaos/skull_totem/S in totems)
+				S.activate()
+				Beam(S,"blood_nobeam",'icons/effects/projectiles.dmi', 50, 3)
+				spawn(100)
+					icon_state = "blood_altar"
+					spawn(50)
 						active = FALSE
-						for(var/mob/living/carbon/human/players in range(7))
-							to_chat(players, "<span='warning'>The ritual is complete! He was satisfied!</span>")
-			else
-				to_chat(user, "<span='warning'>This isn't enough to continue the ritual.2</span>")
-				icon_state = "blood_altar"
+					for(var/mob/living/carbon/human/players in range(7))
+						to_chat(players, "<span='warning'>The ritual is complete! He was satisfied!</span>")
+		else
+			to_chat(user, "<span='warning'>This isn't enough to continue the ritual.</span>")
+			icon_state = "blood_altar"
+			spawn(50)
 				active = FALSE
 
 /obj/item/projectile/beam/blood_effect/no_beam

@@ -54,7 +54,6 @@
 
 	var/datum/faction/faction 			//associated faction
 	var/datum/changeling/changeling		//changeling holder
-	var/datum/god/god = EMPEROR_N	//god followed
 
 	var/rev_cooldown = 0
 
