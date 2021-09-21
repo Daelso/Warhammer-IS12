@@ -76,6 +76,7 @@
 		if(user.god == KHORNE)
 			if(active != TRUE)
 				for(var/mob/living/carbon/human/S in orange(7, src))
+					sacrifices = 0
 					if(S.god == KHORNE)
 						Beam(S,"blood_nobeam",'icons/effects/projectiles.dmi', 50, 7)
 						S.Paralyse(50)
