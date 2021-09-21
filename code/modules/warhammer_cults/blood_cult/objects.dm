@@ -44,47 +44,6 @@
 				if("NO")
 					to_chat(src, "<span='warning'>You are ignorant. But He had mercy upon you, continue your futile struggles.</span>")
 
-/obj/structure/chaos/skull_totem
-	name = "Skull Totem"
-	desc = "A totem with a skull attached on top, you feel some bizarre presence emanating from it."
-	icon = 'icons/obj/blood_cult.dmi'
-	icon_state = "totem"
-	density = 1
-	anchored = 1
-	var/mob/player
-	var/active = FALSE
-
-	attack_hand(mob/living/carbon/human/user)
-		if(user.god == KHORNE)
-			if(!active)
-				if(!player)
-					to_chat(user, "You throw a drop of blood inside the skull totem, imprinting it with your own soul.")
-					player = user
-				else
-					to_chat(player, "You feel uncomfortable for a second.")
-					to_chat(user, "You remove the blood inside the skull totem, erasing the soul mark it had imprinted.")
-					player = null
-			else
-				to_chat(user, "You cant imprint your soul in the totem if it is active.")
-		else
-			to_chat(user, "<span='warning'> YOU AREN'T A SERVANT OF KHORNE! DONT TOUCH IT!")
-
-	proc/activate()
-		var/mob/living/carbon/human/M = player
-		active = TRUE
-		icon_state = "[icon_state]-active"
-		light_power = 10
-		light_range = 3
-		light_color = LIGHT_COLOR_FLARE
-		sleep(100)
-		if(M.god == KHORNE)
-			M.give_gifts()
-		deactivate()
-
-	proc/deactivate()
-		explosion(loc,0,0,0,0)
-		qdel(src)
-
 /obj/structure/reagent_dispensers/khorne_altar
 	name = "Fountain of the Blood God"
 	desc = "This altar works as a direct connection with the ruinous powers."
@@ -100,36 +59,33 @@
 	light_power = 10
 	light_range = 3
 	light_color = LIGHT_COLOR_FLARE
+
+	var/sacrifices = 0
 	var/active = FALSE
 
+	attackby(obj/item/W, mob/user)
+		if(istype(W, /obj/item/organ/external/head))
+			if(sacrifices < 10)
+				sacrifices++
+				qdel(W)
+
 	attack_hand(mob/living/carbon/human/user)
+		if(!user)
+			return
+
 		if(user.god == KHORNE)
 			if(active != TRUE)
-				start_ritual(user)
+				for(var/mob/living/carbon/human/S in orange(7, src))
+					if(S.god == KHORNE)
+						Beam(S,"blood_nobeam",'icons/effects/projectiles.dmi', 50, 7)
+						S.Paralyse(50)
+						spawn(50)
+							S.give_gifts()
+							active = FALSE
 				active = TRUE
 				to_chat(user, "<span='warning'>You start the blood ritual.</span>")
-
-	proc/start_ritual(mob/living/carbon/human/user)
-		icon_state = "[icon_state]-active"
-		var/list/totems = list()
-		for(var/obj/structure/chaos/skull_totem/S in orange(3, src))
-			totems += S
-		if(totems.len >= 4) //minimum totems = 4
-			for(var/obj/structure/chaos/skull_totem/S in totems)
-				S.activate()
-				Beam(S,"blood_nobeam",'icons/effects/projectiles.dmi', 50, 3)
-				spawn(100)
-					icon_state = "blood_altar"
-					spawn(50)
-						active = FALSE
-					for(var/mob/living/carbon/human/players in range(7))
-						to_chat(players, "<span='warning'>The ritual is complete! He was satisfied!</span>")
-		else
-			to_chat(user, "<span='warning'>This isn't enough to continue the ritual.</span>")
-			icon_state = "blood_altar"
-			spawn(50)
-				active = FALSE
-
+			else
+				to_chat(user, "<span='warning'>There is already a ritual in progress.</span>")
 /obj/item/projectile/beam/blood_effect/no_beam
 	icon_state = "blood_nobeam"
 	muzzle_type = /obj/effect/projectile/blood/no_beam

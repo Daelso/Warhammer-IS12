@@ -30,11 +30,10 @@
 	proc/gift_mutation()
 		switch(god)
 			if(KHORNE)
-				change_skin_color(133, 96, 10)
 				species.brute_mod =  0.80
 				species.burn_mod =   0.95
 				species.slowdown =   0.70
-				to_chat(src, "<span='notice'>You start to feel heavier and your skin becomes metallic and rough.</span>)")
+				to_chat(src, "<span='notice'>You start to feel heavier and your skin becomes rough.</span>")
 			if(TZEENTCH)
 				return
 			if(SLAANESH)

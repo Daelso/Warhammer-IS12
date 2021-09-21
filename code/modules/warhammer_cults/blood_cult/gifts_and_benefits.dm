@@ -19,7 +19,6 @@
 			S.clean_blood()
 			playsound(loc, 'sound/effects/gore/severed.ogg', 75)
 
-
 /obj/blood_pool
 	name = "Pool of blood"
 	desc = "Ew"
