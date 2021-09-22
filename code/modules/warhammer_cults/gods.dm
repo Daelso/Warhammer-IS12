@@ -12,12 +12,14 @@
 					if(1 to 50)
 						var/obj/item/I = new /obj/item/melee/pcsword/eviscerator/chainaxe(loc)
 						equip_to_slot_if_possible(I, slot_r_hand)
+						to_chat(src, "A chainaxe appears in your hand, rejoice!")
 						return "item"
 					if(51 to 80)
 						gift_mutation()
 						return "mutation"
 					if(81 to 100)
 						verbs += /mob/living/carbon/human/proc/pool_summoning
+						to_chat(src, "You obtain the power to tap into the immaterium and summon a dark being!")
 						return "spell bloodletter"
 				return "IT DOESNT WORK WHAT THE FUCK"
 			if(TZEENTCH)

@@ -66,6 +66,7 @@
 	attackby(obj/item/W, mob/user)
 		if(istype(W, /obj/item/organ/external/head))
 			if(sacrifices < 10)
+				to_chat(user, "You throw [W] in the fountain.")
 				sacrifices++
 				qdel(W)
 
@@ -78,15 +79,15 @@
 				for(var/mob/living/carbon/human/S in orange(7, src))
 					sacrifices = 0
 					if(S.god == KHORNE)
-						Beam(S,"blood_nobeam",'icons/effects/projectiles.dmi', 50, 7)
-						S.Paralyse(50)
-						spawn(50)
+						Beam(S,"blood_nobeam",'icons/effects/projectiles.dmi', 100, 7)
+						spawn(100)
 							S.give_gifts()
 							active = FALSE
 				active = TRUE
 				to_chat(user, "<span='warning'>You start the blood ritual.</span>")
 			else
 				to_chat(user, "<span='warning'>There is already a ritual in progress.</span>")
+
 /obj/item/projectile/beam/blood_effect/no_beam
 	icon_state = "blood_nobeam"
 	muzzle_type = /obj/effect/projectile/blood/no_beam

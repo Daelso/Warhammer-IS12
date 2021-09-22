@@ -1,7 +1,7 @@
 
-////////////////////////////////
+///////////////////////////////
 ///Khorne Gifts and Benefits///
-////////////////////////////////
+///////////////////////////////
 
 //BLOODLETTER SUMMONING
 
@@ -10,14 +10,8 @@
 	set desc = "Create a pool of blood so you can do blood summonings."
 	set category = "Object"
 
-	var/obj/item/melee/M
-	if(M in get_both_hands())
-		if(!M.was_bloodied)
-			return
-		for(var/obj/item/melee/S in get_both_hands())
-			new /obj/blood_pool(loc)
-			S.clean_blood()
-			playsound(loc, 'sound/effects/gore/severed.ogg', 75)
+	adjustBruteLoss(15)
+	new /obj/blood_pool(loc)
 
 /obj/blood_pool
 	name = "Pool of blood"
@@ -28,14 +22,12 @@
 	density = 0
 
 	attackby(obj/item/O, mob/living/carbon/human/user)
-		if(istype(O, /obj/item/stack/teeth))
-			var/obj/item/stack/teeth/T = O
-			if(T.amount == 32)
-				to_chat(user, "You drop the [T] into the [src].")
-				user.say("Khak'akamshy'y")
-				new /mob/living/simple_animal/daemon/bloodletter(loc)
-				qdel(T)
-				qdel_self()
+		if(istype(O, /obj/item/organ/external/head))
+			to_chat(user, "You drop the [O] into the [src].")
+			user.say("Khak'akamshy'y")
+			new /mob/living/simple_animal/daemon/bloodletter(loc)
+			qdel(O)
+			qdel_self()
 
 /mob/living/simple_animal/daemon/bloodletter
 	name = "Warp Rift"
