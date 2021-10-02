@@ -363,13 +363,13 @@
 	icon_state = "shoota"
 	item_state = "shoota"
 	w_class = ITEM_SIZE_LARGE
-	force = 10
+	force = 22
 	max_shells = 50
 	caliber = ".75"
 	can_jam = FALSE
 	move_delay= 5
-	one_hand_penalty = 6
-	accuracy = 0
+	one_hand_penalty = 2
+	accuracy = -1
 	ammo_type = /obj/item/ammo_casing/ork/shoota
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/ork/shoota

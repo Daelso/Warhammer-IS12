@@ -343,8 +343,8 @@
 	str_requirement = 18
 	force = 50.0
 	caliber = ".75"
-	accuracy = 2
-	fire_delay = 3
+	accuracy = 0
+	fire_delay = 2.5
 	move_delay = 3.5
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/bolt_pistol_magazine
@@ -367,6 +367,7 @@
 	sharp = 1
 	edge = 1
 	move_delay = 1.5
+	accuracy = 1.5
 	attack_verb = list ("stabbed", "sliced")
 	hitsound = "stab_sound"
 
