@@ -111,7 +111,7 @@
 	item_state = "trenchaxe"
 	wielded_icon = "trenchaxe-w"
 	slot_flags = SLOT_BELT|SLOT_BACK|SLOT_S_STORE
-	force = 30
+	force = 28
 	block_chance = 20
 	sharp = TRUE
 	edge = TRUE
@@ -120,6 +120,11 @@
 	equipsound = 'sound/items/equip/axe_equip.ogg'
 	grab_sound = 'sound/items/handle/axe_grab.ogg'
 	grab_sound_is_loud = TRUE
+
+/obj/item/melee/trench_axe/runic
+	name = "Strange Trench Axe"
+	desc = "This trench axe bares runic markings across it's surface and is constructed from an unknown metal."
+	force = 35
 
 // CHAINSWORD 
 
@@ -131,7 +136,7 @@
 	item_state = "mercychainsword"
 	wielded_icon = "trenchaxe-w"
 	slot_flags = SLOT_BELT|SLOT_BACK|SLOT_S_STORE
-	force = 38
+	force = 36
 	block_chance = 15
 	sharp = TRUE
 	edge = TRUE
