@@ -41,7 +41,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 		H.warfare_language_shit(LANGUAGE_LOW_GOTHIC)
 		H.warfare_faction = IMPERIUM
 		H.verbs += list(/mob/living/carbon/human/proc/hire,)
-		to_chat(H, "<span class='notice'><b><font size=3>You are a Rogue Trader, the owner and leader of this outpost. You wield a golden writ of authority directly from the High Lords of Terra themselves. None can command you except your lust for profit and your mission to expand Imperial influence.</font></b></span>")
+		to_chat(H, "<span class='notice'><b><font size=3>You are the Rogue Trader, you wield a golden writ of authority directly from the High Lords of Terra themselves. Recently inheriting this colony from it's previously decimated imperial garrison, it is your choice alone what this colony becomes and whether or not you all befall the same fate as the previous inhabitants of this accursed place.</font></b></span>")
 
 
 /datum/job/captain/equip(var/mob/living/carbon/human/H)
