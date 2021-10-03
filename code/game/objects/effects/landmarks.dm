@@ -404,13 +404,13 @@ Template:
 				/obj/item/clothing/suit/armor/krieger = 1,
 				/obj/item/clothing/suit/armor/krieger/grenadier = 1,)
 
-/obj/random/loot/guardarmor
+/obj/random/loot/guardhelmet
 	name = "Guard Helmet"
 	desc = "This is a loot spawner that spawns imperial guardsmen armor."
 	icon = 'icons/obj/clothing/ties.dmi'
 	icon_state = "horribletie"
 
-/obj/random/loot/guardarmor/spawn_choices()
+/obj/random/loot/guardhelmet/spawn_choices()
 	return list(/obj/item/clothing/head/helmet/guardhelmet = 3,
 				/obj/item/clothing/head/helmet = 2,
 				/obj/item/clothing/head/valushanka = 2,
