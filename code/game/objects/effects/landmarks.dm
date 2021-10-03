@@ -377,13 +377,8 @@ Template:
 	return list(/obj/item/storage/belt/medical/full = 4,
 	            /obj/item/clothing/accessory/holster/waist = 1,
 				/obj/item/storage/box/ifak = 5,
-				/obj/item/reagent_containers/food/snacks/warfare = 1,
 				/obj/item/clothing/accessory/holster/hip = 1,
 				/obj/item/clothing/accessory/storage/webbing = 3,
-				/obj/item/clothing/mask/gas/security = 8,
-				/obj/item/clothing/mask/gas/krieg = 2,
-				/obj/item/clothing/mask/gas/half/cadianrespirator = 8,
-				/obj/item/device/radio/headset/red_team/voxcaster = 4,
 				/obj/item/clothing/accessory/legguards = 2,
 				/obj/item/clothing/accessory/armguards/ballistic = 3,
 				/obj/item/clothing/accessory/armguards/riot = 4,
@@ -425,8 +420,8 @@ Template:
 	icon_state = "revolver"
 
 /obj/random/loot/lightmelee/spawn_choices()
-	return list(/obj/item/material/sword/combat_knife = 10,
-				/obj/item/material/sword/combat_knife/rare = 2,
+	return list(/obj/item/material/sword/combat_knife = 6,
+				/obj/item/material/sword/combat_knife/rare = 3,
 				/obj/item/material/sword/machete = 1)
 
 /obj/random/loot/heavymelee
@@ -470,7 +465,6 @@ Template:
 
 /obj/random/loot/lightstubber/spawn_choices()
 	return list(/obj/item/gun/projectile/shotgun/pump/shitty/sawn = 10,
-				/obj/item/gun/projectile/shotgun/pump/shitty/sawn/smallshotty = 9,
 				/obj/item/gun/projectile/automatic/machinepistol = 9,
 				/obj/item/gun/projectile/automatic/machinepistol/a80 = 8,
 				/obj/item/gun/projectile/warfare = 12,
