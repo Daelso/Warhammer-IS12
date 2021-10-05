@@ -517,79 +517,15 @@
 			to_chat(M, "<span class='danger'>You hear a sickening click!</span>")
 			playsound(src, 'sound/effects/mine_arm.ogg', 100, FALSE)
 			armed = TRUE
+			if(prob(5))
+				to_chat(M, "<span class='danger'>Almost heaven...</span>")
+				M.unlock_achievement(new/datum/achievement/kingsman())
+				blow()
 
 /obj/structure/landmine/Uncrossed(var/mob/living/M as mob)
 	if(istype(M))
 		if(armed)
 			blow()
-
-
-
-//Activate this to win!
-/obj/structure/destruction_computer
-	name = "Point Of No Return"
-	desc = "DON'T LET THE ENEMY TOUCH THIS!"
-	icon = 'icons/obj/warfare.dmi'
-	icon_state = "destruct"
-	anchored = TRUE
-	density = TRUE
-	var/faction = null
-	var/activated = FALSE
-	var/countdown_time
-	var/doomsday_timer
-
-/obj/structure/destruction_computer/New()
-	..()
-	name = "[faction] [name]"
-	countdown_time = config.warfare_end_time MINUTES //Countdown time is in minutes because seconds is FUCKED.
-
-/obj/structure/destruction_computer/attack_hand(mob/user)
-	. = ..()
-	if(ishuman(user))
-		var/mob/living/carbon/human/H = user
-		if(H.warfare_faction == faction)
-			if(!activated)
-				return
-			if(!H.doing_something)
-				H.doing_something = TRUE
-				if(do_after(H,100))
-					user.unlock_achievement(new/datum/achievement/deactivate())
-					activated = FALSE
-					deltimer(doomsday_timer)
-					to_world(uppertext("<big>[H.warfare_faction] have disarmed the [src]!</big>"))
-					playsound(src, 'sound/effects/mine_arm.ogg', 100, FALSE)
-					sound_to(world, 'sound/effects/ponr_activate.ogg')
-					H.doing_something = FALSE
-				H.doing_something = FALSE
-			else
-				to_chat(H, "I'm already disarming the device!")
-
-		else
-			if(activated)
-				return
-			if(!H.doing_something)
-				H.doing_something = TRUE
-				if(do_after(H, 30))
-					user.unlock_achievement(new/datum/achievement/point_of_no_return())
-					playsound(src, 'sound/effects/mine_arm.ogg', 100, FALSE)
-					sound_to(world, 'sound/effects/ponr_activate.ogg')
-					to_world(uppertext("<big>[H.warfare_faction] have activated the [src]! They will achieve victory in [countdown_time/10] seconds!</big>"))
-					activated = TRUE
-					doomsday_timer = addtimer(CALLBACK(src,/obj/structure/destruction_computer/proc/kaboom), countdown_time, TIMER_STOPPABLE|TIMER_UNIQUE|TIMER_NO_HASH_WAIT|TIMER_OVERRIDE)
-					H.doing_something = FALSE
-				H.doing_something = FALSE
-			else
-				to_chat(H, "I'm already arming the device!")
-
-/obj/structure/destruction_computer/proc/kaboom()
-	SSwarfare.end_warfare(faction)//really simple I know.
-
-/obj/structure/destruction_computer/red
-	faction = RED_TEAM
-
-/obj/structure/destruction_computer/blue
-	faction = BLUE_TEAM
-
 
 /obj/structure/banner
 	name = "Banner"

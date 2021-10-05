@@ -98,7 +98,7 @@
 
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/pulse
 	equip_cooldown = 30
-	name = "eZ-13 mk2 heavy pulse rifle"
+	name = "Tau XV-08 pulse rifle"
 	icon_state = "mecha_pulse"
 	energy_drain = 15 KILOWATTS
 	origin_tech = list(TECH_MATERIAL = 3, TECH_COMBAT = 6, TECH_POWER = 4)
@@ -106,7 +106,7 @@
 	fire_sound = 'sound/weapons/marauder.ogg'
 
 /obj/item/projectile/beam/pulse/heavy
-	name = "heavy pulse laser"
+	name = "heavy energy pulse"
 	icon_state = "pulse1_bl"
 	var/life = 20
 
@@ -209,7 +209,7 @@
 	projectile_energy_cost = 50 KILOWATTS
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg
-	name = "\improper Ultra AC 2"
+	name = "\improper Dreadnaught Assault Cannon"
 	icon_state = "mecha_uac2"
 	equip_cooldown = 10
 	projectile = /obj/item/projectile/bullet/pistol/medium
@@ -254,6 +254,15 @@
 	projectile_energy_cost = 200 KILOWATTS
 	equip_cooldown = 60
 
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/explosive/tau
+	name = "\improper Tau photon missile rack"
+	icon_state = "mecha_missilerack"
+	projectile = /obj/item/missile/tau
+	fire_sound = 'sound/effects/bang.ogg'
+	projectiles = 4
+	projectile_energy_cost = 250 KILOWATTS
+	equip_cooldown = 60
+
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/explosive/Fire(atom/movable/AM, atom/target)
 	var/obj/item/missile/M = AM
 	M.primed = 1
@@ -268,6 +277,18 @@
 	throw_impact(atom/hit_atom)
 		if(primed)
 			explosion(hit_atom, 0, 1, 2, 4)
+			qdel(src)
+		else
+			..()
+		return
+
+/obj/item/missile/tau
+	icon = 'icons/obj/grenade.dmi'
+	icon_state = "missile"
+
+	throw_impact(atom/hit_atom)
+		if(primed)
+			explosion(hit_atom, 1, 1, 2, 3)
 			qdel(src)
 		else
 			..()

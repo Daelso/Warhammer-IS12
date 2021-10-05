@@ -317,7 +317,7 @@ steam.start() -- spawns the effect
 /////////////////////////////////////////////
 
 /datum/effect/effect/system/smoke_spread
-	var/total_smoke = 0 // To stop it being spammed and lagging!
+	var/total_smoke = 9000 // OVER 9000! It was disabled by setting this value to 0 to avoid lags and smoke spamming, but I decided to bring it back.
 	var/direction
 	var/smoke_type = /obj/effect/effect/smoke
 
@@ -339,7 +339,7 @@ steam.start() -- spawns the effect
 		if(src.total_smoke > 20)
 			return
 		addtimer(CALLBACK(src, .proc/make_smokes, i), 0)
-			
+
 
 //Hi, this isn't bay. Please don't think too hard about how ugly these are. It's better than a billion spawns.
 /datum/effect/effect/system/smoke_spread/proc/make_smokes(var/i)

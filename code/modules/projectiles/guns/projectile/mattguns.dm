@@ -160,7 +160,7 @@
 	item_state = "smallshotty"
 	wielded_item_state = "smallshotty-wielded"
 	empty_icon = "smallshotty-e"
-	one_hand_penalty = 2.5 
+	one_hand_penalty = 2.5
 	armor_penetration = 2
 
 /obj/item/gun/projectile/shotgun/pump/shitty/bayonet
@@ -514,7 +514,7 @@
 
 /obj/item/gun/projectile/automatic/flamer
 	name = "Mk.1 Scorcher"
-	desc = "An incredibly dangerous hand-held flamethrower used often in infiltration or siege operations."
+	desc = "An incredibly dangerous hand-held flamer used often in infiltration or siege operations."
 	icon_state = "flamer"
 	item_state = "flamer"
 	wielded_item_state = "flamer-wielded"

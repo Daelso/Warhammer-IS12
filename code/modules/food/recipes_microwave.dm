@@ -874,8 +874,7 @@ I said no!
 		return being_cooked
 
 /datum/recipe/frostpunksoup
-	reagents = list(/datum/reagent/water = 10)
-	items = list (/obj/item/stack/material/wood)
+	reagents = list(/datum/reagent/water = 10, /datum/reagent/sawdust = 10)
 	result= /obj/item/reagent_containers/food/snacks/frostpunksoup
 
 /datum/recipe/cracker
