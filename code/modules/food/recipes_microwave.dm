@@ -873,6 +873,11 @@ I said no!
 		being_cooked.reagents.del_reagent(/datum/reagent/toxin)
 		return being_cooked
 
+/datum/recipe/frostpunksoup
+	reagents = list(/datum/reagent/water = 10)
+	items = list (/obj/item/stack/logs)
+	result= /obj/item/reagent_containers/food/snacks/frostpunksoup
+
 /datum/recipe/cracker
 	reagents = list(/datum/reagent/sodiumchloride = 1)
 	items = list(

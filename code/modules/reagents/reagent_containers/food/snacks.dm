@@ -1591,6 +1591,15 @@
 			src.desc = "A wish come true!"
 			reagents.add_reagent(/datum/reagent/nutriment, 8, list("something good" = 8))
 
+/obj/item/reagent_containers/food/snacks/frostpunksoup
+	name = "Sawdust soup"
+	desc = "Nutritious, but tasteless meal, cheap and fitting as emergency food ration (go boil your flying kid fairy instead, weebs, you ain't get this!). You seem to be very poor on rations, if you are cooking this, isn't it, Captain?"
+	icon_state = "frostpunksoup"
+	trash = /obj/item/trash/snack_bowl
+	center_of_mass = "x=16;y=11"
+	nutriment_desc = list ("sawdust" = 10, "gross shit" = 10)
+	nutriment_amt = 10
+
 /obj/item/reagent_containers/food/snacks/hotchili
 	name = "Hot Chili"
 	desc = "A five alarm Texan Chili!"
