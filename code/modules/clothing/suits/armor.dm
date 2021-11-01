@@ -369,8 +369,8 @@ obj/item/clothing/suit/armor
 /obj/item/clothing/suit/armor/cuirass
 	name = "Plate Cuirass"
 	desc = "An old cuirass reinforced with scrap metal plating and dense fabric."
-	icon_state = "combat"
-	item_state = "combat"
+	icon_state = "combat2"
+	item_state = "combat2"
 	armor = list(melee = 55, bullet = 30, laser = 40, energy = 40, bomb = 35, bio = 10, rad = 50)
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	cold_protection = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
