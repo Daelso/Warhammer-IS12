@@ -381,7 +381,7 @@ obj/item/clothing/suit/armor
 
 /obj/item/clothing/suit/armor/guardsman/mercenary
 	name = "Mercenary Flak Armour - Medium"
-	desc = "An altered fabrication of Imperial Pattern Flak Armor - this particular version is commonly used by mercenaries guilds in service to the renegade houses of the frontier."
+	desc = "An altered fabrication of Imperial Pattern Flak Armor - this particular version is commonly used by mercenary guilds in service to the renegade houses of the frontier."
 	icon_state = "merc" // mob/suit.dmi
 	item_state = "merc"
 	allowed = list(/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/cell,/obj/item/gun/energy/las/lasgun)
