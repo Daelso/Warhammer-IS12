@@ -369,8 +369,8 @@ obj/item/clothing/suit/armor
 /obj/item/clothing/suit/armor/cuirass
 	name = "Plate Cuirass"
 	desc = "An old cuirass reinforced with scrap metal plating and dense fabric."
-	icon_state = "combat"
-	item_state = "combat"
+	icon_state = "combat2"
+	item_state = "combat2"
 	armor = list(melee = 55, bullet = 30, laser = 40, energy = 40, bomb = 35, bio = 10, rad = 50)
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	cold_protection = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
@@ -381,7 +381,7 @@ obj/item/clothing/suit/armor
 
 /obj/item/clothing/suit/armor/guardsman/mercenary
 	name = "Mercenary Flak Armour - Medium"
-	desc = "An altered fabrication of Imperial Pattern Flak Armor - this particular version is commonly used by mercenaries guilds in service to the renegade houses of the frontier."
+	desc = "An altered fabrication of Imperial Pattern Flak Armor - this particular version is commonly used by mercenary guilds in service to the renegade houses of the frontier."
 	icon_state = "merc" // mob/suit.dmi
 	item_state = "merc"
 	allowed = list(/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/cell,/obj/item/gun/energy/las/lasgun)
