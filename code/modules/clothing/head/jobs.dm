@@ -490,5 +490,5 @@
 	desc = "An helmet issued to the Battle Sister of the Adepta Sororitas Militant Wing, This one bears the Sigil of the Order of The Sacred Rose, If you looks closely, you can see it's omits holy power, making you feels safer and secure.</i>"
 	icon_state = "sister"
 	item_state = "sister"
-	armor = list(melee = 65, bullet = 65, laser = 55, energy = 40, bomb = 40, bio = 0, rad = 0)
+	armor = list(melee = 55, bullet = 55, laser = 45, energy = 40, bomb = 40, bio = 0, rad = 0)
 	species_restricted = list(SPECIES_ORK)
