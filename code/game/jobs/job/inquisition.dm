@@ -32,7 +32,7 @@
 	equip(var/mob/living/carbon/human/H)
 		var/current_name = H.real_name
 		..()
-		H.fully_replace_character_name("Acolyte [current_name]")
+		H.fully_replace_character_name("[current_name]")
 		H.add_stats(rand(14,18), rand(14,18), rand(14,18), rand(14,18)) //highly trained and skilled
 		H.assign_random_quirk()
 		H.witchblood()
