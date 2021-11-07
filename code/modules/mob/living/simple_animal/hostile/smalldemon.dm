@@ -6,8 +6,8 @@
 	icon_state = "demon"
 	icon_living = "demon"
 	icon_dead = "demon_dead"
-	maxHealth = 200
-	health = 200 
+	maxHealth = 260
+	health = 260 
 	universal_speak = 1
 	speak_emote = list("harks")
 	emote_hear = list("growls")
@@ -105,11 +105,11 @@
 		return
 	custom_emote(1, pick( list("slashes at [target_mob]", "bites [target_mob]") ) )
 
-	var/damage = rand(35,60)
+	var/damage = rand(35,50)
 
 	if(ishuman(target_mob))
 		var/mob/living/carbon/human/H = target_mob
-		var/dam_zone = pick(BP_CHEST, BP_L_HAND, BP_R_HAND, BP_L_LEG, BP_R_LEG)
+		var/dam_zone = pick(BP_CHEST, BP_L_HAND, BP_R_HAND, BP_L_LEG, BP_R_LEG) // Body Part Targetting
 		var/obj/item/organ/external/affecting = H.get_organ(ran_zone(dam_zone))
 		H.apply_damage(damage, BRUTE, affecting, H.run_armor_check(affecting, "melee"), DAM_SHARP|DAM_EDGE)
 		return H
@@ -127,8 +127,8 @@
 	icon_state = "floater"
 	icon_living = "floater"
 	icon_dead = "floater2"
-	maxHealth = 250
-	health = 250
+	maxHealth = 350
+	health = 350
 	speak_emote = list("harks")
 	emote_hear = list("growls")
 	response_help  = "gnashes"
@@ -136,19 +136,20 @@
 	response_harm   = "mauls"
 	attacktext = "sloshes"
 	see_in_dark = 6
+	environment_smash = 1
 
 	speed = 1.8
 
 /mob/living/simple_animal/hostile/smalldemon/zygote/AttackingTarget()
 	if(!Adjacent(target_mob))
 		return
-	custom_emote(1, pick( list("sloshes at [target_mob]", "pulls [target_mob]") ) ) // attack emotes
+	custom_emote(1, pick( list("sloshes at [target_mob]", "tears [target_mob]") ) ) // attack emotes
 
-	var/damage = rand(30,60) // Damage Value
+	var/damage = rand(30,50) // Damage Value
 
 	if(ishuman(target_mob))
 		var/mob/living/carbon/human/H = target_mob
-		var/dam_zone = pick(BP_CHEST, BP_L_HAND, BP_R_HAND, BP_L_LEG, BP_R_LEG)
+		var/dam_zone = pick(BP_CHEST)
 		var/obj/item/organ/external/affecting = H.get_organ(ran_zone(dam_zone))
 		H.apply_damage(damage, BRUTE, affecting, H.run_armor_check(affecting, "melee"), DAM_SHARP|DAM_EDGE) // damage type 
 		return H
@@ -165,8 +166,8 @@
 	icon_state = "oormat"
 	icon_living = "oormat"
 	icon_dead = "oormat2"
-	maxHealth = 700
-	health = 700
+	maxHealth = 770
+	health = 770
 	speak_emote = list("harks")
 	emote_hear = list("growls")
 	response_help  = "gnashes"
@@ -182,11 +183,11 @@
 		return
 	custom_emote(1, pick( list("bites at [target_mob]", "crushes [target_mob]") ) ) // attack emotes
 
-	var/damage = rand(50,70) // Damage Value
+	var/damage = rand(40,58) // Damage Value
 
 	if(ishuman(target_mob))
 		var/mob/living/carbon/human/H = target_mob
-		var/dam_zone = pick(BP_CHEST, BP_L_HAND, BP_R_HAND, BP_L_LEG, BP_R_LEG)
+		var/dam_zone = pick(BP_CHEST)
 		var/obj/item/organ/external/affecting = H.get_organ(ran_zone(dam_zone))
 		H.apply_damage(damage, BRUTE, affecting, H.run_armor_check(affecting, "melee"), DAM_SHARP|DAM_EDGE) // damage type 
 		return H
@@ -203,8 +204,8 @@
 	icon_state = "khorne_daemon" // Average speed. High damage and HP.
 	icon_living = "khorne_daemon"
 	icon_dead = "khorne_daemon_dead_anim"
-	maxHealth = 500
-	health = 500
+	maxHealth = 590
+	health = 590
 	speak_emote = list("harks")
 	emote_hear = list("growls")
 	response_help  = "gnashes"
@@ -214,17 +215,18 @@
 	see_in_dark = 6
 
 	speed = 1.2
+	dodge_chance = 20
 
 /mob/living/simple_animal/hostile/smalldemon/bloodletter/AttackingTarget()
 	if(!Adjacent(target_mob))
 		return
 	custom_emote(1, pick( list("slices at [target_mob]", "tears [target_mob]") ) ) // attack emotes
 
-	var/damage = rand(65,85) // Damage Value
+	var/damage = rand(50,60) // Damage Value
 
 	if(ishuman(target_mob))
 		var/mob/living/carbon/human/H = target_mob
-		var/dam_zone = pick(BP_CHEST, BP_L_HAND, BP_R_HAND, BP_L_LEG, BP_R_LEG)
+		var/dam_zone = pick(BP_HEAD, BP_L_HAND, BP_R_HAND)
 		var/obj/item/organ/external/affecting = H.get_organ(ran_zone(dam_zone))
 		H.apply_damage(damage, BRUTE, affecting, H.run_armor_check(affecting, "melee"), DAM_SHARP|DAM_EDGE) // damage type 
 		return H
@@ -246,8 +248,8 @@
 	icon_state = "loge"
 	icon_living = "loge"
 	icon_dead = "loge2"
-	maxHealth = 380
-	health = 380
+	maxHealth = 450
+	health = 450
 	speak_emote = list("harks")
 	emote_hear = list("growls")
 	response_help  = "gnashes"
