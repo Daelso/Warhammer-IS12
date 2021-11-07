@@ -668,8 +668,8 @@
 	icon_state = "crowbar"
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BELT
-	force = 7.0
-	throwforce = 7.0
+	force = 17
+	throwforce = 16.0
 	throw_range = 3
 	item_state = "crowbar"
 	hitsound = 'sound/weapons/crowbarhit2.ogg' //hitsound = 'sound/weapons/crowhit.ogg'//This sound effect has 0 punch, makes crowbars feel less powerful.
@@ -687,14 +687,16 @@
 /obj/item/crowbar/red
 	icon_state = "red_crowbar"
 	item_state = "crowbar_red"
+	force = 20
+	throwforce = 18
 
 /obj/item/crowbar/prybar
 	name = "pry bar"
 	desc = "A steel bar with a wedge. It comes in a variety of configurations - collect them all."
 	icon_state = "prybar"
 	item_state = "crowbar"
-	force = 4.0
-	throwforce = 6.0
+	force = 12
+	throwforce = 10.0
 	throw_range = 5
 	w_class = ITEM_SIZE_SMALL
 	matter = list(DEFAULT_WALL_MATERIAL = 80)
