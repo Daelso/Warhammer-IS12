@@ -931,14 +931,14 @@ Area basic template
 /area/cadiaoutpost/oa/village
 	name = "Village"
 	icon_state = "village"
-	music = 'sound/newmusic/General_Ambient2.ogg'
+	music = 'sound/newmusic/General_Ambient3.ogg'
 	requires_power = FALSE
 	dynamic_lighting = 1
 
 /area/cadiaoutpost/oa/villageinside 
 	name = "Inside Village"
 	icon_state = "village"
-	music = 'sound/newmusic/VillageInside.ogg'
+	music = 'sound/newmusic/General_Ambient3.ogg'
 	requires_power = FALSE
 	dynamic_lighting = 1
 
