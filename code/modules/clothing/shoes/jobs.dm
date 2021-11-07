@@ -238,7 +238,6 @@
 	desc = "A pair of Power Boots issued to the Battle Sisters of the Order Of The Sacred Rose of the Adepta Sororitas.</i>"
 	icon_state = "sister"
 	item_state = "sister"
-	canremove = 0
 	armor = list(melee = 50, bullet = 50, laser = 50, energy = 40, bomb = 40, bio = 0, rad = 0)
 	species_restricted = list(SPECIES_HUMAN)
 
