@@ -39,7 +39,7 @@
 		var/troopnum = rand(1,50000)
 		H.fully_replace_character_name("Guardsman [troopnum]")
 	else
-		H.fully_replace_character_name("Guardsman [H.real_name]")
+		H.fully_replace_character_name("[H.real_name]")
 	H.assign_random_quirk()
 	H.witchblood()
 	H.get_idcard()?.access = list(access_security, access_sec_doors, access_brig, access_forensics_lockers, access_all_personal_lockers, access_maint_tunnels)
@@ -96,7 +96,7 @@
 		var/troopnum = rand(1,50000)
 		H.fully_replace_character_name("Watchmaster [troopnum]")
 	else
-		H.fully_replace_character_name("Sergeant [current_name]")
+		H.fully_replace_character_name("[current_name]")
 	to_chat(H, "<span class='notice'><b><font size=3>You are a Sergeant of the Imperial Guard. Round up some guardsmen and construct your own squad. You are to be a beacon of discipline and order amongst your men, let your behavior reflect this.</font></b></span>")
 	H.verbs += list(
 	/mob/living/carbon/human/proc/khorne,
@@ -182,7 +182,7 @@
 /datum/job/ig/enforcer/equip(var/mob/living/carbon/human/H)
 	var/current_name = H.real_name
 	..()
-	H.fully_replace_character_name("Enforcer [current_name]")
+	H.fully_replace_character_name("[current_name]")
 	H.add_stats(rand(14,18), rand(10,14), rand(12,13), rand(10,13)) //meant to be a brute keeping the plebs in line
 	H.add_skills(rand(6,10),rand(6,10))
 	H.assign_random_quirk()
