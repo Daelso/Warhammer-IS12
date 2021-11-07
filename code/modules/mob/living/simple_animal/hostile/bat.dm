@@ -13,12 +13,12 @@
 	response_disarm = "gently pushes aside the"
 	response_harm = "hits the"
 	speed = 0
-	maxHealth = 50
-	health = 50
+	maxHealth = 20
+	health = 20
 
-	harm_intent_damage = 8
-	melee_damage_lower = 2
-	melee_damage_upper = 8
+	harm_intent_damage = 5
+	melee_damage_lower = 4
+	melee_damage_upper = 5
 	attacktext = "bites"
 	attack_sound = 'sound/weapons/bite.ogg'
 
