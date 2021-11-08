@@ -444,7 +444,6 @@ Template:
 				/obj/item/gun/energy/las/laspistol/heavy = 4,
 				/obj/item/gun/projectile/mervex = 4,
 				/obj/item/gun/projectile/necros = 3,
-				/obj/item/gun/projectile/talon/renegade = 1,
 				/obj/item/gun/projectile/slugrevolver = 2,
 				/obj/item/gun/projectile/shotgun/pump = 8,
 				/obj/item/gun/projectile/shotgun/pump/boltaction/shitty/tinkered = 4,
