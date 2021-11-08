@@ -877,11 +877,11 @@
 	cock_sound 		= 'sound/weapons/guns/interact/ltrifle_cock.ogg'
 	loaded_icon = "sisterbolter-30"
 	unloaded_icon = "sisterbolter-30-e"
-	fire_delay = 3.5
+	fire_delay = 3.6
 	burst = 1
 	move_delay = 3.5
 	one_hand_penalty = 2
-	automatic = 1.1
+	automatic = 1.2
 	accuracy = -0.35
 	firemodes = list()
 	gun_type = GUN_LMG

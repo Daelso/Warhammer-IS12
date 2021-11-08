@@ -111,7 +111,7 @@ Template:
 
 //Command//
 /obj/effect/landmark/start/captain
-	name = "Rouge Trader"
+	name = "Rogue Trader"
 /obj/effect/landmark/start/hop
 	name = "Seneschal"
 /obj/effect/landmark/start/hos
@@ -124,6 +124,8 @@ Template:
 	name = "Almoness Advance"
 /obj/effect/landmark/start/inquisitor
 	name = "Inquisitor"
+/obj/effect/landmark/start/sisterofbattle
+	name = "Battle Sister"
 /obj/effect/landmark/start/envoy
 	name = "Astartes Envoy"
 

@@ -139,7 +139,7 @@
 	icon_state = "shovel"
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BELT
-	force = 8
+	force = 15
 	throwforce = 4
 	item_state = "shovel"
 	w_class = ITEM_SIZE_SMALL
@@ -150,12 +150,18 @@
 	hitsound = "shovel_hit"
 	drop_sound = 'sound/items/shovel_drop.ogg'
 
+/obj/item/shovel/krieg
+	name = "Krieg Shovel"
+	desc = "A large entrenching tool used by the Death Korps to excavate dirt and bludgeon their enemies."
+	force = 25
+	throwforce = 18
+
 /obj/item/shovel/spade
 	name = "spade"
 	desc = "A small tool for digging and moving dirt."
 	icon_state = "spade"
 	item_state = "spade"
-	force = 5.0
+	force = 8.0
 	throwforce = 7.0
 	w_class = ITEM_SIZE_SMALL
 
@@ -167,7 +173,7 @@
 	icon_state = "shovel"
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	slot_flags = SLOT_BELT
-	force = 8
+	force = 12
 	throwforce = 4
 	item_state = "shovel"
 	w_class = ITEM_SIZE_SMALL

@@ -37,16 +37,12 @@
 		SSwarfare.red.team += H
 		if(can_be_in_squad)
 			H.assign_random_squad(IMPERIUM)
-		H.fully_replace_character_name("Guardsman [H.real_name]")
+		H.fully_replace_character_name("[H.real_name]")
 		H.assign_random_quirk()
 		H.witchblood()
 		H.get_idcard()?.access = list(access_security, access_sec_doors, access_brig, access_forensics_lockers, access_all_personal_lockers, access_maint_tunnels)
 		to_chat(H, "<span class='notice'><b><font size=3>You are a soldier of the Imperium. Obey your Sergeant and Commissar. The Emperor Protects. </font></b></span>")
 		H.verbs += list(
-		/mob/living/carbon/human/proc/khorne,
-		/mob/living/carbon/human/proc/nurgle,
-		/mob/living/carbon/human/proc/slaanesh,
-		/mob/living/carbon/human/proc/tzeentch,
 		/mob/living/carbon/human/proc/regimentselection,)
 
 // Guardsmen
@@ -95,13 +91,9 @@
 		H.get_idcard()?.access = list(access_security, access_sec_doors, access_brig, access_forensics_lockers, access_all_personal_lockers, access_maint_tunnels, access_guard_armory, access_armory)
 		H.assign_squad_leader(IMPERIUM)
 		H.warfare_faction = IMPERIUM
-		H.fully_replace_character_name("Sergeant [current_name]")
+		H.fully_replace_character_name("[current_name]")
 		to_chat(H, "<span class='notice'><b><font size=3>You are a Sergeant of the Imperial Guard. Round up some guardsmen and construct your own squad. You are to be a beacon of discipline and order amongst your men, let your behavior reflect this.</font></b></span>")
 		H.verbs += list(
-		/mob/living/carbon/human/proc/khorne,
-		/mob/living/carbon/human/proc/nurgle,
-		/mob/living/carbon/human/proc/slaanesh,
-		/mob/living/carbon/human/proc/tzeentch,
 		/mob/living/carbon/human/proc/sergeantselection,)
 
 // Combat Medicae
@@ -139,7 +131,7 @@
 		var/current_name = H.real_name
 		H.warfare_faction = IMPERIUM
 		..()
-		H.fully_replace_character_name("Medicae [current_name]")
+		H.fully_replace_character_name("[current_name]")
 		H.set_trait(new/datum/trait/death_tolerant())
 		if(can_be_in_squad)
 			H.assign_random_squad(IMPERIUM, "medic")
@@ -147,11 +139,6 @@
 		H.get_equipped_item(slot_s_store)
 		H.assign_random_quirk()
 		H.warfare_language_shit(LANGUAGE_LOW_GOTHIC)
-		H.verbs += list(
-		/mob/living/carbon/human/proc/khorne,
-		/mob/living/carbon/human/proc/nurgle,
-		/mob/living/carbon/human/proc/slaanesh,
-		/mob/living/carbon/human/proc/tzeentch)
 		to_chat(H, "<span class='notice'><b><font size=3>You are a combat medicae. Your purpose is to both fight the enemies of the Imperium and to triage the wounded and ensure they survive long enough to be seen by a Sister Hospitaller. You have medical training but little surgical training so avoid field surgery unless absolutely necessary</font></b></span>")
 
 
@@ -327,7 +314,7 @@
 			equip_to_slot_or_del(new /obj/item/clothing/gloves/combat/krieg, slot_gloves)
 			equip_to_slot_or_del(new /obj/item/device/flashlight/lantern, slot_belt)
 			equip_to_slot_or_del(new /obj/item/storage/box/ifak, slot_l_store)
-			equip_to_slot_or_del(new /obj/item/shovel, slot_in_backpack)
+			equip_to_slot_or_del(new /obj/item/shovel/krieg, slot_in_backpack)
 			equip_to_slot_or_del(new /obj/item/gun/energy/las/lasgun/luscius, slot_l_hand)
 			equip_to_slot_or_del(new /obj/item/cell/lasgun, slot_in_backpack)
 			equip_to_slot_or_del(new /obj/item/cell/lasgun, slot_in_backpack)
@@ -462,7 +449,7 @@
 			equip_to_slot_or_del(new /obj/item/clothing/shoes/jackboots/krieg, slot_shoes)
 			equip_to_slot_or_del(new /obj/item/clothing/gloves/combat/krieg, slot_gloves)
 			equip_to_slot_or_del(new /obj/item/melee/mercycs, slot_belt)
-			equip_to_slot_or_del(new /obj/item/shovel, slot_in_backpack)
+			equip_to_slot_or_del(new /obj/item/shovel/krieg, slot_in_backpack)
 			equip_to_slot_or_del(new /obj/item/gun/energy/las/lasgun/luscius/rare, slot_l_hand)
 			equip_to_slot_or_del(new /obj/item/cell/lasgun, slot_in_backpack)
 			equip_to_slot_or_del(new /obj/item/cell/lasgun, slot_in_backpack)

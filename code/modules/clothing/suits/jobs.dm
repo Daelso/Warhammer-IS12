@@ -18,7 +18,7 @@
 	icon_state = "undertaker"
 	item_state = "undertaker"
 	blood_overlay_type = "armor"
-	armor = list(melee = 15, bullet = 15, laser = 5, energy = 0, bomb = 10, bio = 5, rad = 5)
+	armor = list(melee = 25, bullet = 25, laser = 15, energy = 0, bomb = 10, bio = 5, rad = 5)
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
 	cold_protection = UPPER_TORSO | LOWER_TORSO | LEGS | FEET | ARMS | HANDS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
@@ -117,7 +117,7 @@
 /obj/item/clothing/suit/security/navyhos
 	name = "Commissar's jacket"
 	desc = "This piece of clothing was specifically designed for asserting superior authority."
-	armor = list(melee = 25, bullet = 35, laser = 25, energy = 0, bomb = 10, bio = 5, rad = 5)
+	armor = list(melee = 35, bullet = 45, laser = 35, energy = 0, bomb = 10, bio = 5, rad = 5)
 	icon_state = "hosbluejacket"
 	item_state = "hosbluejacket"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
@@ -278,7 +278,7 @@
 	desc = "A colorful yet somewhat tattered uniform."
 	icon_state = "xomrobe"
 	item_state = "xomrobe"
-	armor = list(melee = 15, bullet = 15, laser = 5, energy = 5, bomb = 10, bio = 10, rad = 10)
+	armor = list(melee = 25, bullet = 25, laser = 15, energy = 5, bomb = 10, bio = 10, rad = 10)
 	blood_overlay_type = "coat"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
 	cold_protection = UPPER_TORSO | LOWER_TORSO | LEGS | FEET | ARMS | HANDS
@@ -289,7 +289,7 @@
 	desc = "Elegant clothing for a wealthy administrator."
 	icon_state = "robes"
 	item_state = "robes_item"
-	armor = list(melee = 15, bullet = 15, laser = 5, energy = 5, bomb = 10, bio = 10, rad = 10)
+	armor = list(melee = 25, bullet = 25, laser = 25, energy = 5, bomb = 10, bio = 10, rad = 10)
 	blood_overlay_type = "coat"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
 	cold_protection = UPPER_TORSO | LOWER_TORSO | LEGS | FEET | ARMS | HANDS
@@ -387,7 +387,7 @@
 	desc = "A miner's vestaments"
 	icon_state = "yminer"
 	item_state = "yminer"
-	armor = list(melee = 48, bullet = 25, laser = 15, energy = 0, bomb = 10, bio = 5, rad = 15)
+	armor = list(melee = 38, bullet = 28, laser = 20, energy = 0, bomb = 10, bio = 5, rad = 15)
 	cold_protection = UPPER_TORSO | LOWER_TORSO | LEGS | FEET | ARMS | HANDS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 
@@ -396,7 +396,7 @@
 	desc = "A sherpa's vestaments"
 	icon_state = "sherpa"
 	item_state = "sherpa"
-	armor = list(melee = 25, bullet = 25, laser = 15, energy = 0, bomb = 10, bio = 5, rad = 15)
+	armor = list(melee = 35, bullet = 35, laser = 25, energy = 0, bomb = 10, bio = 5, rad = 15)
 	cold_protection = UPPER_TORSO | LOWER_TORSO | LEGS | FEET | ARMS | HANDS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 
@@ -405,7 +405,7 @@
 	desc = "A jacket that only the shadiest of characters would wear."
 	icon_state = "scum"
 	item_state = "scum"
-	armor = list(melee = 20, bullet = 25, laser = 25, energy = 0, bomb = 10, bio = 5, rad = 15)
+	armor = list(melee = 30, bullet = 35, laser = 35, energy = 0, bomb = 10, bio = 5, rad = 15)
 	cold_protection = UPPER_TORSO | LOWER_TORSO | LEGS | FEET | ARMS | HANDS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 
@@ -415,7 +415,7 @@
 	desc = "Worn by practioners and other surgoens."
 	icon_state = "prac_robes"
 	item_state = "prac_robes"
-	armor = list(melee = 25, bullet = 25, laser = 15, energy = 0, bomb = 10, bio = 50, rad = 30)
+	armor = list(melee = 30, bullet = 25, laser = 15, energy = 0, bomb = 10, bio = 50, rad = 30)
 	cold_protection = UPPER_TORSO | LOWER_TORSO | LEGS | FEET | ARMS | HANDS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 
@@ -435,7 +435,7 @@
 	desc = "The holy garments marking the wearer as a discipulus hospitaller"
 	icon_state = "hospitallerold"
 	item_state = "hospitallerold"
-	armor = list(melee = 35, bullet = 35, laser = 20, energy = 25, bomb = 35, bio = 50, rad = 50)
+	armor = list(melee = 38, bullet = 38, laser = 20, energy = 25, bomb = 35, bio = 50, rad = 50)
 	cold_protection = UPPER_TORSO | LOWER_TORSO | LEGS | FEET | ARMS | HANDS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 
