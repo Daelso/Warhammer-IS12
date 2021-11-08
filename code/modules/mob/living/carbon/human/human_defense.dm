@@ -612,7 +612,6 @@ meteor_act
 		var/mob/living/carbon/human/attacker = user
 		if(attacker.warfare_faction)
 			if(attacker.warfare_faction == src.warfare_faction && src.stat != DEAD)
-				to_chat(attacker, "<big>[src] is on my side!</big>")
 				GLOB.ff_incidents++
 
 	var/armour = run_armor_check(hit_zone, "melee")

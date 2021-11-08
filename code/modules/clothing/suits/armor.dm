@@ -670,14 +670,14 @@ obj/item/clothing/suit/armor
 	desc = "The Sacred and holy Power Armour adorned by Battle Sister of the Order Of The Sacred Rose, It's illuminate the field with it glorious light, Being near it make you feels safer and secured."
 	icon_state = "sister"
 	item_state = "sister"
-	armor = list(melee = 75, bullet = 75, laser = 60, energy = 20, bomb = 60, bio = 70, rad = 70)
+	armor = list(melee = 75, bullet = 70, laser = 60, energy = 20, bomb = 60, bio = 70, rad = 70)
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET
 	cold_protection = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
 	flags_inv = HIDEJUMPSUIT
-	canremove = 0
 	species_restricted = list(SPECIES_HUMAN)
+	canremove = 0
 
 /obj/item/sobrelic
 	name = "primeval order of our martyred lady chestpiece"
