@@ -1,9 +1,9 @@
 //Due to how large this one is it gets its own file. Sister of Battle and all her stuff including items, excluding weapons those are in mattguns.dm, is also located here.
 
-//Confessor
+//Deacon
 
 /datum/job/chaplain
-	title = "Ministorum Confessor"
+	title = "Deacon"
 	department = "Ministorum"
 	department_flag = CIV|COM
 	total_positions = 1
@@ -34,12 +34,12 @@
 	equip(var/mob/living/carbon/human/H)
 		var/current_name = H.real_name
 		..()
-		H.fully_replace_character_name("Confessor [current_name]")
-		H.add_stats(rand(10,14), rand(10,14), rand(10,14), rand(12,16)) //frail and holy
+		H.fully_replace_character_name("Deacon [current_name]")
+		H.add_stats(rand(11,15), rand(10,14), rand(10,14), rand(12,16)) //frail and holy
 		H.get_idcard()?.access = list(access_heads, access_security, access_sec_doors, access_brig, access_forensics_lockers, access_all_personal_lockers, access_maint_tunnels, access_sob,)
 		H.warfare_language_shit(LANGUAGE_HIGH_GOTHIC)
 		H.warfare_faction = IMPERIUM
-		to_chat(H, "<span class='notice'><b><font size=3>You are a Confessor-Millitant attached to the Rogue Trader through the Missionarus Galaxia. You are one of the Ecclesiarchy's fearsome zealot preachers, your oratory skills can stir entire crowds and cause them to turn on one another, exposing eachother's darkest secrets. You often work on worlds where faith is lacking, and people are rebellious. It is your job to preach to the flock and indoctrinate new individuals into it, protect the chapel, and ensure the relics in your reliquary remain safe and untouched by the unworthly.</font></b></span>")
+		to_chat(H, "<span class='notice'><b><font size=3>You are the Ecclesiarch Deacon. You are one of the Imperial Cult's priesthood, your oratory skills can stir entire crowds of the faithful and turn a coward into a zealot. You often work on worlds where faith is lacking, and people are rebellious. It is your job to spread the Imperial Cult to this new colony and it's ignorant masses, bringing their backwards beliefs in line with the faith of the God Emperor, as well as guiding the already faithful.</font></b></span>")
 
 	equip(var/mob/living/carbon/human/H, var/alt_title, var/ask_questions = TRUE)
 		. = ..()
@@ -175,7 +175,7 @@
 		O.armor_penetration += 1
 		O.isblessed = 1
 		playsound(src, 'sound/voice/blessing.ogg', 70, 0, 1)
-		visible_message("[O] is bathed in righteous incense as the Confessor chants a short litany, you can sense a change in the weapon just by touching it.")
+		visible_message("[O] is bathed in righteous incense as the Deacon chants a short litany, you can sense a change in the weapon just by touching it.")
 
 //this blesses swords
 /obj/item/melee/whip/censer/attackby(var/obj/item/material/sword/O, var/mob/user)
@@ -188,7 +188,7 @@
 		O.block_chance += 5
 		O.isblessed = 1
 		playsound(src, 'sound/voice/blessing.ogg', 70, 0, 1)
-		visible_message("[O] is bathed in righteous incense as the Confessor chants a short litany, you can sense a change in the weapon just by touching it.")
+		visible_message("[O] is bathed in righteous incense as the Deacon chants a short litany, you can sense a change in the weapon just by touching it.")
 
 
 
