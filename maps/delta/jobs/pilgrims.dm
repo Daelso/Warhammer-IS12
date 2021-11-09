@@ -29,11 +29,12 @@
 		H.verbs += list(
 			/mob/living/carbon/human/proc/penitentclass,
 		)
+// Warning to anyone editing jobs. Only jobs in Maps/Warhammer/Jobs effect server, Maps/Delta/Jobs doesn't do anything.
+
+
 /*
 Pilgrim Fate System
 */
-
-//yeah this might be the most retarded way of doing it but it works - plz no bully Matt
 
 //mob/living/carbon/human/proc/penitentclass(var/mob/living/carbon/human/M)
 /mob/living/carbon/human/proc/penitentclass()
@@ -199,7 +200,7 @@ Pilgrim Fate System
 	equip(var/mob/living/carbon/human/H)
 		H.warfare_faction = IMPERIUM
 		..()
-		H.add_stats(rand(9,12), rand(9,12), rand(9,12), rand (8,11)) //they suck and are supposed to suck
+		H.add_stats(rand(9,13), rand(9,12), rand(9,12), rand (9,11)) //they suck and are supposed to suck
 		H.warfare_language_shit(LANGUAGE_LOW_GOTHIC)
 		H.assign_random_quirk()
 		H.verbs += list(
@@ -209,6 +210,33 @@ Pilgrim Fate System
 		/mob/living/carbon/human/proc/tzeentch)
 		to_chat(H, "<span class='notice'><b><font size=3>You landed on this outpost some time ago, with the savings you had, you opened an inn hoping to grow your wealth serving the various pilgrims and travelers. Trade with gatherers and the outpost to always stay stocked so that no paying customer will be without food and drink. You have a full kitchen, alcohol and small farm to grow what you need. </font></b></span>")
 
+/datum/job/merchant  //so that the inn always has someone working
+	title = "Merchant"
+	department_flag = PIL
+	social_class = SOCIAL_CLASS_MED //better off than your average gross pilgrim
+	total_positions = 1
+	spawn_positions = 1
+	open_when_dead = 1
+	supervisors = "Money"
+	selection_color = "#848484"
+	access = list(access_bar,)
+	minimal_access = list(access_bar)
+	outfit_type = /decl/hierarchy/outfit/job/merchant
+	latejoin_at_spawnpoints = TRUE
+	announced = FALSE
+
+	equip(var/mob/living/carbon/human/H)
+		H.warfare_faction = IMPERIUM
+		..()
+		H.add_stats(rand(10,14), rand(10,14), rand(10,12), rand (9,11)) //they suck and are supposed to suck
+		H.warfare_language_shit(LANGUAGE_LOW_GOTHIC)
+		H.assign_random_quirk()
+		H.verbs += list(
+		/mob/living/carbon/human/proc/khorne,
+		/mob/living/carbon/human/proc/nurgle,
+		/mob/living/carbon/human/proc/slaanesh,
+		/mob/living/carbon/human/proc/tzeentch)
+		to_chat(H, "<span class='notice'><b><font size=3>Guided by your lust for thrones you smelled opportunity on this newly founded world. Work with the village and the outpost to organize trade and enrich yourself.</font></b></span>")
 
 
 
@@ -231,7 +259,7 @@ Pilgrim Fate System
 	equip(var/mob/living/carbon/human/H)
 		H.warfare_faction = IMPERIUM
 		..()
-		H.add_stats(rand(10,12), rand(9,12), rand(10,12), rand (12,15)) //a lil better fed than others.
+		H.add_stats(rand(10,12), rand(9,13), rand(10,12), rand (12,15)) //a lil better fed than others.
 		H.warfare_language_shit(LANGUAGE_LOW_GOTHIC)
 		H.assign_random_quirk()
 		to_chat(H, "<span class='notice'><b><font size=3>You are the Imperium's Administratum liason on this world. You act as a go-between for the village and the outpost. Work with your magistratum enforcers to ensure no Imperial laws are violated and to collect taxes to pay off the tithe. Ensure there are pilgrims working the farm and manage the market, the stalls are yours to rent out! </font></b></span>")
@@ -272,6 +300,26 @@ Pilgrim Fate System
 	/obj/item/stack/thrones3/five = 1,
 )
 
+
+/decl/hierarchy/outfit/job/merchant
+	name = OUTFIT_JOB_NAME("Merchant")
+	uniform = /obj/item/clothing/suit/merchant
+	pda_type = /obj/item/device/pda/penitent
+	back = /obj/item/storage/backpack/satchel/warfare
+	neck = /obj/item/reagent_containers/food/drinks/canteen
+	head = /obj/item/clothing/head/smokingcap
+	l_ear = null
+	r_ear = null
+	pda_slot = null
+	shoes = /obj/item/clothing/shoes/vigilante
+	suit_store = /obj/item/gun/projectile/shotgun/pump/shitty
+	backpack_contents = list(
+	/obj/item/ammo_magazine/handful/shotgun/shotgun_handful = 2,
+	/obj/item/storage/box/beanbags = 1,
+	/obj/item/stack/thrones = 1,
+	/obj/item/stack/thrones2 = 1,
+	/obj/item/stack/thrones3/five = 1,
+)	
 
 //Administrator
 /decl/hierarchy/outfit/job/administrator
