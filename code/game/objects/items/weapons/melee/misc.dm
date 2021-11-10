@@ -122,16 +122,42 @@
 
 // NEW MELEE
 
+/obj/item/melee/trench_axe/runic
+	name = "runic axe"
+	color = "grey"
+	desc = "A strange alien axe used for unknown purposes, it's construction seems ritualistic in nature."
+	force = 36
+	block_chance = 40
+
+/obj/item/toy/katana/seolite
+	name = "seolite blade"
+	color = "grey"
+	desc = "A fine blade far exceeding the craftsmanship of the mechanicus."
+	force = 39
+	throwforce = 20
+
+/obj/item/material/sword/cane/seolite
+	block_chance = 60
+	force = 33
+	name = "ancient rapier"
+	desc = "This runic blade is of excellent quality and make, it fits perfectly in your hand."
+
+/obj/item/material/hatchet/machete/deluxe/seolite
+	name = "seolite cutter"
+	desc = "A cumbersome sword used for hacking and slicing."
+	icon_state = "machetedx"
+	item_state = "machete"
+
 /obj/item/melee/classic_baton/daemonhammer
-	name = "Daemonhammer"
+	name = "daemonhammer"
 	desc = "A power weapon of incredible legend and stature amongst the Ordos Malleus, this Daemonhammer has been used by countless Inquisitor's in their conflict against the unholy creatures of chaos."
 	icon_state = "thunder_hammer"
 	item_state = "thunder_hammer"
 	wielded_icon = "thunder_hammer-w"
 	slot_flags = SLOT_BACK|SLOT_S_STORE
 	w_class = ITEM_SIZE_HUGE
-	str_requirement = 12
-	force = 50
+	str_requirement = 13
+	force = 44
 	block_chance = 38
 	grab_sound_is_loud = TRUE
 	weapon_speed_delay = 12
