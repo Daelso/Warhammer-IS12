@@ -92,7 +92,6 @@ var/const/NO_EMAG_ACT = -50
 
 /obj/item/card/id
 	name = "identification card"
-	desc = "A card used to provide ID and determine access."
 	icon_state = "id"
 	item_state = "card-id"
 
@@ -405,21 +404,18 @@ var/const/NO_EMAG_ACT = -50
 
 /obj/item/card/id/innkey1
 	name = "inn room key 1"
-	desc = "A key that opens room 1 of the inn"
 	icon_state = "key2"
 	access = list(access_inn1)
 	grab_sound = 'sound/items/keyring_up.ogg'
 
 /obj/item/card/id/innkey2
 	name = "inn room key 2"
-	desc = "A key that opens room 2 of the inn"
 	icon_state = "key3"
 	access = list(access_inn2)
 	grab_sound = 'sound/items/keyring_up.ogg'
 
 /obj/item/card/id/innkey3
 	name = "inn room key 3"
-	desc = "A key that opens room 3 of the inn"
 	icon_state = "key4"
 	access = list(access_inn3)
 	grab_sound = 'sound/items/keyring_up.ogg'
