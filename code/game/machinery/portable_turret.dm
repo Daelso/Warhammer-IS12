@@ -36,7 +36,7 @@
 	var/egun = null			//holder to handle certain guns switching bullettypes
 
 	var/last_fired = 0		//1: if the turret is cooling down from a shot, 0: turret is ready to fire
-	var/shot_delay = 12		//1.2 seconds between each shot
+	var/shot_delay = 22		//2.2 seconds between each shot
 
 	var/check_arrest = 1	//checks if the perp is set to arrest
 	var/check_records = 0	//checks if a security record exists at all
