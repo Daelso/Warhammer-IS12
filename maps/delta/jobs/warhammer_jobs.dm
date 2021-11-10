@@ -28,6 +28,7 @@
 	/datum/job/administrator,
 	/datum/job/enforcer,
 	/datum/job/innkeeper,
+	/datum/job/merchant,
 	/datum/job/hydro,
 	/datum/job/undertaker,
 	/datum/job/penitent,
