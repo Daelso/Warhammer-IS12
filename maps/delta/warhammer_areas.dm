@@ -912,7 +912,7 @@ Area basic template
 /area/cadiaoutpost/oa/caves/dark
 	name = "Caves Dark" // Powered areas of the city.
 	icon_state = "cave"
-	music = 'sound/newmusic/Caves_City.ogg'
+	music = 'sound/newmusic/Caves_Dark.ogg'
 	requires_power = FALSE
 
 /area/cadiaoutpost/oa/caves/undercity
