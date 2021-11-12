@@ -703,6 +703,13 @@
 	name = "Godwyn Mark Vb Pattern Bolter"
 	desc = "The Adeptus Astartes's legendary and destructive Bolter, This one is painted in XIXth Chapter Raven Guards's colour scheme."
 	icon_state = "ravenbolter"
+	item_state = "autoshotty"
+	wielded_item_state = "autoshotty-wielded"
+	unwielded_loaded_icon = "autoshotty"
+	wielded_loaded_icon = "autoshotty-wielded"
+	unloaded_icon = "autoshotty-e"
+	unwielded_unloaded_icon = "autoshotty-e"
+	wielded_unloaded_icon = "autoshotty-wielded-e"
 	str_requirement = 18 //IS12 has a 20 str cap so dont go over it
 	w_class = ITEM_SIZE_HUGE
 	force = 20
@@ -719,12 +726,10 @@
 	unload_sound 	= 'sound/weapons/guns/interact/ltrifle_magout.ogg'
 	reload_sound 	= 'sound/weapons/guns/interact/ltrifle_magin.ogg'
 	cock_sound 		= 'sound/weapons/guns/interact/ltrifle_cock.ogg'
-	loaded_icon = "ravenbolter-30"
-	unloaded_icon = "ravenbolter-e"
 	fire_delay = 3.5
 	burst = 1
 	move_delay = 5
-	one_hand_penalty = 8
+	one_hand_penalty = 4
 	automatic = 1.1
 	firemodes = list()
 	gun_type = GUN_LMG
@@ -742,6 +747,13 @@
 	name = "Godwyn Mark Vb Pattern Bolter"
 	desc = "The Adeptus Astartes's legendary and destructive Bolter, This one is painted in XIIIth Chapter Ultramarines's colour scheme."
 	icon_state = "ultrabolter"
+	item_state = "autoshotty"
+	wielded_item_state = "autoshotty-wielded"
+	unwielded_loaded_icon = "autoshotty"
+	wielded_loaded_icon = "autoshotty-wielded"
+	unloaded_icon = "autoshotty-e"
+	unwielded_unloaded_icon = "autoshotty-e"
+	wielded_unloaded_icon = "autoshotty-wielded-e"
 	str_requirement = 18 //IS12 has a 20 str cap so dont go over it
 	w_class = ITEM_SIZE_HUGE
 	force = 20
@@ -758,8 +770,6 @@
 	unload_sound 	= 'sound/weapons/guns/interact/ltrifle_magout.ogg'
 	reload_sound 	= 'sound/weapons/guns/interact/ltrifle_magin.ogg'
 	cock_sound 		= 'sound/weapons/guns/interact/ltrifle_cock.ogg'
-	loaded_icon = "ultrabolter-30"
-	unloaded_icon = "ultrabolter-e"
 	fire_delay = 3.5
 	burst = 1
 	move_delay = 5
@@ -780,6 +790,13 @@
 	name = "Godwyn Mark Vb Pattern Bolter"
 	desc = "The Adeptus Astartes's legendary and destructive Bolter, This one is painted in XVIIIth Chapter Salamanders's colour scheme."
 	icon_state = "sallybolter"
+	item_state = "autoshotty"
+	wielded_item_state = "autoshotty-wielded"
+	unwielded_loaded_icon = "autoshotty"
+	wielded_loaded_icon = "autoshotty-wielded"
+	unloaded_icon = "autoshotty-e"
+	unwielded_unloaded_icon = "autoshotty-e"
+	wielded_unloaded_icon = "autoshotty-wielded-e"
 	str_requirement = 18 //IS12 has a 20 str cap so dont go over it
 	w_class = ITEM_SIZE_HUGE
 	force = 20
@@ -791,7 +808,7 @@
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/bolt_rifle_magazine
 	allowed_magazines = /obj/item/ammo_magazine/bolt_rifle_magazine
-	one_hand_penalty = 9
+	one_hand_penalty = 4
 	fire_sound = 'sound/weapons/gunshot/harbinger.ogg'
 	unload_sound 	= 'sound/weapons/guns/interact/ltrifle_magout.ogg'
 	reload_sound 	= 'sound/weapons/guns/interact/ltrifle_magin.ogg'
@@ -818,6 +835,13 @@
 	name = "Locke Pattern bolter"
 	desc = "The Locke Pattern Bolter, designed for Adepta Arbites personnel when heavier firepower are required. Can also be found in hands of Astra Militarum officers, veterans and Commissar, Though relatively uncommon. It is a human-sized Bolter, Thus it's very popular among the troops and the lucky ones who get their hands on one of these bad boy."
 	icon_state = "lockebolter"
+	item_state = "autoshotty"
+	wielded_item_state = "autoshotty-wielded"
+	unwielded_loaded_icon = "autoshotty"
+	wielded_loaded_icon = "autoshotty-wielded"
+	unloaded_icon = "autoshotty-e"
+	unwielded_unloaded_icon = "autoshotty-e"
+	wielded_unloaded_icon = "autoshotty-wielded-e"
 	str_requirement = 10
 	w_class = ITEM_SIZE_HUGE
 	force = 15
@@ -836,14 +860,15 @@
 	cock_sound 		= 'sound/weapons/guns/interact/ltrifle_cock.ogg'
 	loaded_icon = "lockebolter-30"
 	unloaded_icon = "lockebolter-e"
-	fire_delay = 3.7
+	fire_delay = 3.5
 	burst = 1
 	move_delay = 4
-	one_hand_penalty = 3
-	automatic = 1.3
+	armor_penetration = -10
+	one_hand_penalty = 4
+	automatic = 1.1
 	firemodes = list()
 	gun_type = GUN_LMG
-	accuracy = -0.5
+	accuracy = -0.4
 
 /obj/item/gun/projectile/sallybolter/update_icon()
 	..()
@@ -855,6 +880,13 @@
 /obj/item/gun/projectile/sisterbolter
 	name = "Godwyn-De'az Pattern Bolter Rifle"
 	desc = "A modified bolter rifle, developed specifically for the Adepta Sororitas. This rifle is almost more scripture than weapon, and is clearly wielded by a devout woman. A large Sarissa is attached to the end of it, useful for carving the Emperor's Mercy from the flesh of those who defy him. <i>She was an angel, pure as righteous destruction. She laid low the twisted and lifted the hearts of the righteous. At her passing, a million voices cried out her name. Shall we ever again see her like? No, not now, nor ever again...</i>"
+	item_state = "autoshotty"
+	wielded_item_state = "autoshotty-wielded"
+	unwielded_loaded_icon = "autoshotty"
+	wielded_loaded_icon = "autoshotty-wielded"
+	unloaded_icon = "autoshotty-e"
+	unwielded_unloaded_icon = "autoshotty-e"
+	wielded_unloaded_icon = "autoshotty-wielded-e"
 	force = 20
 	sharp = 1
 	edge = 1
