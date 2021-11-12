@@ -310,6 +310,7 @@
 
 	//Because of how sheet types are checked, you have to explicitely declare ALL the subpaths.
 	var/list/sheet_reagents = list(
+		/obj/item/stack/logs = /datum/reagent/sawdust,
 		/obj/item/stack/material/iron = /datum/reagent/iron,
 
 		/obj/item/stack/material/uranium = /datum/reagent/uranium,

@@ -40,6 +40,14 @@
 	name = "Brown crayon dust"
 	color = "#846f35"
 
+/datum/reagent/sawdust
+	name = "Sawdust"
+	description = "Wooden sawdust."
+	reagent_state = REAGENT_SOLID
+	taste_description = "cool reference"
+	color = "#846f35"
+	var/injectable = 0
+
 /datum/reagent/paint
 	name = "Paint"
 	description = "This paint will stick to almost any object."

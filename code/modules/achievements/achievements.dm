@@ -24,7 +24,7 @@
 
 /datum/achievement/poo_eaten
 	name = "Eat Da Poo Poo"
-	description = "Discusting!"
+	description = "Disgusting!"
 
 /datum/achievement/revive
 	name = "Life Giver"
@@ -76,17 +76,6 @@
 	name = "Hello Darkness My Old Friend"
 	description = "Sometimes the stresses of combat get the better of us."
 
-/datum/achievement/point_of_no_return
-	name = "Point Of No Return"
-	description = "Activate the point of no return device."
-	difficulty = DIFF_HARD
-
-/datum/achievement/deactivate
-	name = "Point Of Some Return"
-	description = "Deactivate the point of no return device."
-	difficulty = DIFF_HARD
-	announced = TRUE
-
 /datum/achievement/warfare_survivor
 	name = "Trench Survivor"
 	description = "You have survived this battle. But at what cost?"
@@ -94,7 +83,7 @@
 	announced = TRUE
 
 /datum/achievement/child_fire
-	name = "Napalm Sticks To Scavs"
+	name = "Napalm Sticks To Kids"
 	description = "As good a use for your scorcher as any."
 
 /datum/achievement/flamer
@@ -105,6 +94,12 @@
 	name = "BOOM HEADSHOT"
 	difficulty = DIFF_MEDIUM
 	description = "In all likelyhood, they had a helmet, and you accomplished pretty much nothing."
+
+/datum/achievement/kingsman
+	name = "Emperorsman"
+	description = "West Vostroyaaa, forge mama... Planet roads, take me home... Sorry, but this isn't ancient terran movie about spies, fella."
+	difficulty = DIFF_HARD
+	announced = TRUE
 
 /datum/achievement/astartes
 	name = "Know no fear!"
