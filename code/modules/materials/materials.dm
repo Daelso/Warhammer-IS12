@@ -297,7 +297,7 @@ var/list/name_to_material
 	sheet_plural_name = "ingots"
 
 /material/phoron
-	name = "phoron"
+	name = "carbosyl"
 	stack_type = /obj/item/stack/material/phoron
 	ignition_point = PHORON_MINIMUM_BURN_TEMPERATURE
 	icon_base = "stone"
@@ -307,8 +307,8 @@ var/list/name_to_material
 	hardness = 30
 	stack_origin_tech = list(TECH_MATERIAL = 2, TECH_PHORON = 2)
 	door_icon_base = "stone"
-	sheet_singular_name = "crystal"
-	sheet_plural_name = "crystals"
+	sheet_singular_name = "brick"
+	sheet_plural_name = "bricks"
 	is_fusion_fuel = 1
 
 /material/phoron/supermatter
@@ -562,7 +562,7 @@ var/list/name_to_material
 
 /material/glass/phoron
 	name = "phglass"
-	display_name = "borosilicate glass"
+	display_name = "carbosylicate glass"
 	stack_type = /obj/item/stack/material/glass/phoronglass
 	flags = MATERIAL_BRITTLE
 	integrity = 70
@@ -580,7 +580,7 @@ var/list/name_to_material
 	brute_armor = 3
 	burn_armor = 10
 	melting_point = T0C + 4000
-	display_name = "reinforced borosilicate glass"
+	display_name = "reinforced carbosylicate glass"
 	stack_type = /obj/item/stack/material/glass/phoronrglass
 	stack_origin_tech = list(TECH_MATERIAL = 5)
 	composite_material = list() //todo

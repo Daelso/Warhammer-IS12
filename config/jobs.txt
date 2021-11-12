@@ -1,7 +1,7 @@
-Commendant=1
+Town Commandant=1
 Logistics Administrator=1
 Commissar=1
-Forgeworks Foreman=1
+Factory Foreman=1
 Research Director=1
 Head Practitioner=1
 

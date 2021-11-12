@@ -423,11 +423,11 @@ Area basic template
 //////////////////////////////////////////
 
 /area/cadiaoutpost/oa/bridge/offices/roguetrader
-	name = "Rogue Trader's Office"
+	name = "Commandant's Office"
 	icon_state = "captain"
 
 /area/cadiaoutpost/oa/bridge/offices/seneschal
-	name = "Seneschal's Office"
+	name = "Logist's Office"
 	icon_state = "hop"
 
 /area/cadiaoutpost/oa/bridge/offices/commissar
@@ -439,11 +439,11 @@ Area basic template
 	icon_state = "rd"
 
 /area/cadiaoutpost/oa/bridge/offices/magosexplorator
-	name = "Magos Explorator's Office"
+	name = "Foreman's Office"
 	icon_state = "ce"
 
 /area/cadiaoutpost/oa/bridge/offices/sisterhospitaller
-	name = "Sister Hospitaller's Office"
+	name = "Head Practitioner's Office"
 	icon_state = "cmo"
 
 ////////////////////////
@@ -466,16 +466,17 @@ Area basic template
 	icon_state = "cave"
 	music = 'sound/music/caves.ogg'
 	var/instability = 0
+	dynamic_lighting = 1
 
 /////////////////////////////////////////
 ////////////////Engineering/////////////
 ////////////////////////////////////////
 /area/cadiaoutpost/oa/engineering
-	name = "Machinamentum"
+	name = "Steelworks"
 	icon_state = "engineering"
 
 /area/cadiaoutpost/oa/engineering/engine
-	name = "Sacrarium Machina"
+	name = "Polarizer Room"
 	icon_state = "engine"
 
 /area/cadiaoutpost/oa/engineering/engistorage
@@ -525,13 +526,13 @@ Area basic template
 //////////////Medical////////////////
 /////////////////////////////////////
 /area/cadiaoutpost/oa/medicae
-	name = "Medicae"
+	name = "Infirmary"
 	icon_state = "medbay"
 	dynamic_lighting = 1
 	requires_power = 0
 
 /area/cadiaoutpost/oa/medicae/storage
-	name = "Medicae Storage"
+	name = "Infirmary Storage"
 	icon_state = "medbay2"
 
 /area/cadiaoutpost/oa/medicae/virology
@@ -587,7 +588,7 @@ Area basic template
 	icon_state = "cryo"
 
 /area/cadiaoutpost/oa/medicae/medicaebreak
-	name = "Medicae Breakroom"
+	name = "Infirmary Breakroom"
 	icon_state = "medbay_break"
 
 
@@ -595,11 +596,11 @@ Area basic template
 ////////////////Research//////////////////
 /////////////////////////////////////////
 /area/cadiaoutpost/oa/research
-	name = "Biocogitatum"
+	name = "Research Laboratory"
 	icon_state = "research"
 
 /area/cadiaoutpost/oa/research/robotics
-	name = "Cybersmithy"
+	name = "Autoprosthetic Laboratory"
 	icon_state = "robotics"
 
 /area/cadiaoutpost/oa/research/xenobiology
@@ -693,7 +694,7 @@ Area basic template
 	icon_state = "cargo"
 
 /area/cadiaoutpost/oa/supply/cargo/quartoffice
-	name = "Quartermaster office"
+	name = "Logist-Administrator's office"
 	icon_state = "quartoffice"
 
 /area/cadiaoutpost/oa/supply/cargo/warehouse
@@ -725,7 +726,7 @@ Area basic template
 	icon_state = "mining"
 
 /area/cadiaoutpost/oa/supply/mining/eva
-	name = "Mining Eva"
+	name = "Mining Foreroom"
 	icon_state = "mining_eva"
 
 /area/cadiaoutpost/oa/supply/mining/miningliving

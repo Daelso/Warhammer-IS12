@@ -143,7 +143,7 @@
 	amount = 50
 
 /obj/item/stack/material/phoron
-	name = "solid phoron"
+	name = "solid carbosyl"
 	icon_state = "sheet-phoron"
 	default_type = "phoron"
 	icon = 'icons/obj/items.dmi'
@@ -373,7 +373,7 @@
 	amount = 50
 
 /obj/item/stack/material/glass/phoronrglass
-	name = "reinforced borosilicate glass"
+	name = "reinforced carbosyl glass"
 	desc = "This sheet is special platinum-glass alloy designed to withstand large temperatures. It is reinforced with few rods."
 	singular_name = "reinforced borosilicate glass sheet"
 	icon_state = "sheet-phoronrglass"
@@ -388,7 +388,7 @@
 
 /obj/item/stack/material/scrap
 	name = "scrap"
-	desc = "This piece of scrap is made by the ork mek boys and is used in everything they craft. Is just trash in the eyes of any other race."
+	desc = "This is a sheet of old, maybe even pre-Dominion scrap, mostly metal heap and hunk. Still useful, though"
 	singular_name = "scrap sheet"
 	icon_state = "sheet-scrap"
 	default_type = "scrap"

@@ -3,14 +3,14 @@
 	name = "Warhammer"
 	full_name = "Warhammer 40k"
 	path = "warhammer"
-	station_name  = "The Spirit of Cadia"
-	station_short = "Cadia"
-	dock_name     = "Cadia"
-	boss_name     = "Segmentum Command"
-	boss_short    = "SC"
-	company_name  = "Segmentum Ultima"
-	company_short = "SU"
-	system_name = "Helican Subsector"
+	station_name  = "Eipharius"
+	station_short = "Eipharius"
+	dock_name     = "Eipharius"
+	boss_name     = "Council of Founders"
+	boss_short    = "CF"
+	company_name  = "Dominion of Alanii"
+	company_short = "DA"
+	system_name = "Eipharo Region"
 
 	lobby_icon = 'maps/warhammer/fullscreen.dmi'
 	lobby_screens = list("lobby1","lobby2","lobby3","lobby4","lobby5", "lobby6")

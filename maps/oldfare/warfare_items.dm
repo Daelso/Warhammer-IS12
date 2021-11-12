@@ -482,6 +482,12 @@
 	icon_state = "prac_boots"
 	item_state = "prac_boots"
 
+/obj/item/clothing/shoes/prac_boots/headprac
+	name = "head practioner boots"
+	desc = "They're spending most their lives, livin' in the trencher's paradise!"
+	icon_state = "prac_boots"
+	item_state = "prac_boots"
+
 /obj/item/clothing/gloves/prac_gloves
 	name = "practioner gloves"
 	desc = "Now you can grope the dead without worrying about what you're contracting."

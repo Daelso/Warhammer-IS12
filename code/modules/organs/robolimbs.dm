@@ -137,7 +137,7 @@ var/datum/robolimb/basic_robolimb
 	restricted_to = list(SPECIES_HUMAN)
 
 /datum/robolimb/warfare
-	company = "Limbs R US"
+	company = "Clockson Automatons"
 	desc = "Shoddily made human limb replacements, for when you're flesh just won't cut it anymore."
 	icon = 'icons/mob/human_races/cyberlimbs/warfare/warfare_main.dmi'
 
