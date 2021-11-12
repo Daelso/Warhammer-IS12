@@ -178,6 +178,6 @@
 	for(var/mob/living/carbon/human/H in T.team)
 		H.add_event("morale boost", /datum/happiness_event/morale_boost)
 
-	T.startCooldown("Morale Boost", 10 MINUTES)
+	T.startCooldown("Morale Boost", 5 MINUTES)
 	sound_to(T.team, 'sound/effects/klaxon_alarm.ogg')
-	to_chat(T.team, "<h1><span class='[class]'>OOORAH!</span></h1>")
+	to_chat(T.team, "<h1><span class='[class]'>OOORAH! FOR THE FOUNDERS!</span></h1>")
