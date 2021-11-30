@@ -251,7 +251,7 @@
 	shoes = /obj/item/clothing/shoes/genestealerfeet
 	neck = null
 	back = null
-	l_ear = /obj/item/device/radio/headset/hivemind
+	l_ear = null
 	belt = null
 	l_pocket = null
 	id = null

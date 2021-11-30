@@ -1,7 +1,6 @@
 /datum/species/xenos/tyranids
 	name = SPECIES_TYRANID
 	name_plural = "Tyranids"
-	secondary_langs = list(LANGUAGE_HIVE)
 	name_language = null // Use the first-name last-name generator rather than a language scrambler
 	icobase = 'icons/mob/human_races/tyranids/r_tyranid.dmi'
 	deform = 'icons/mob/human_races/tyranids/r_def_tyranid.dmi'
@@ -171,7 +170,7 @@
 	src.mind.special_role = "Tyranid"
 	T.AddInfectionImages()
 	src.AddInfectionImages()//likely redundant but sometimes they don't show so better to make it check twice on both parties.
-	T.equip_to_slot_or_del(new /obj/item/device/radio/headset/hivemind, slot_r_ear)
+	T.add_language(LANGUAGE_TYRANID)
 	src.dnastore++
 
 	return 1
@@ -271,6 +270,7 @@
 	client?.color = null
 	src.health = 450
 	src.maxHealth = 450
+	src.warfare_language_shit(LANGUAGE_TYRANID)
 	src.verbs -= /mob/living/carbon/human/genestealer/proc/givestealerstats //removes verb at the end so they can't spam it for whatever reason
 
 /mob/living/carbon/human/genestealer/proc/gsheal()
