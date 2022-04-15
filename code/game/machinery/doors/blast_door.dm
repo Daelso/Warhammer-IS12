@@ -246,6 +246,57 @@
 	block_air_zones = 0
 	opaque = 0
 	opacity = 0
+	maxhealth = 500 //idk nobel, change this later or something nigga idc
+
+/obj/machinery/door/blast/grates/attackby(obj/item/W as obj, mob/living/user as mob)
+	if(!(W.obj_flags & OBJ_FLAG_CONDUCTIBLE) || !shock(user, 70))
+		user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+		user.adjustStaminaLoss(2)
+		playsound(loc, 'sound/effects/grillehit.ogg', 80, 1)
+		switch(W.damtype)
+			if("fire")
+				health -= W.force
+			if("brute")
+				health -= W.force * 0.1
+		visible_message("<span class='danger'>[src] has been hit by [user] with [W].</span>")
+	healthcheck()
+	..()
+	return
+
+/obj/machinery/door/blast/grates/attack_hand(mob/living/user as mob)
+	user.adjustStaminaLoss(2)//Hitting that shit is hard work.
+	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+	playsound(loc, 'sound/effects/grillehit.ogg', 80, 1)
+
+	var/damage_dealt = 1
+	var/attack_message = "kicks"
+	if(istype(user,/mob/living/carbon/human))
+		var/mob/living/carbon/human/H = user
+		if(H.species.can_shred(H))
+			attack_message = "mangles"
+			damage_dealt = 5
+
+	if(shock(user, 70))
+		return
+
+	if(HULK in user.mutations)
+		damage_dealt += 5
+	else
+		damage_dealt += 1
+
+	attack_generic(user,damage_dealt,attack_message)
+
+/obj/machinery/door/blast/grates/attack_generic(var/mob/user, var/damage, var/attack_verb)
+	visible_message("<span class='danger'>[user] [attack_verb] the [src]!</span>")
+	attack_animation(user)
+	health -= damage
+	spawn(1) healthcheck()
+	return 1
+
+/obj/machinery/door/blast/grates/proc/healthcheck()
+	if(health <= 0)
+		qdel(src)
+	return
 
 /obj/machinery/door/blast/grates/open
 	icon_state = "gshutter0"
@@ -266,7 +317,6 @@
 /obj/machinery/door/blast/id_door/open
 	icon_state = "iddoor_open"
 	begins_closed = FALSE
-
 
 /obj/machinery/door/blast/bordergatel
 	icon = 'icons/obj/doors/gates1.dmi'
